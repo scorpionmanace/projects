@@ -111,6 +111,34 @@ web.items.sliders = function(){
                         grid: true
                     });
 
+
+                      var $range = $("#range_48");
+
+                    $range.ionRangeSlider({
+                        type: "double",
+                        min: 0,
+                        max: 100,
+                        from: 20,
+                        to: 80
+                    });
+
+                    $range.on("change", function () {
+                        var $this = $(this),
+                            value = $this.prop("value").split(";");
+
+                        console.log(value[0] + " - " + value[1]);
+});
+
+
+
+
+
+
+
+
+
+
+
                 });
                   $(function () {
                     $("#range6").ionRangeSlider({
