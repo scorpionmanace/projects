@@ -54,10 +54,10 @@
 	height: 100px;
 }
 
-div[class^="hero-"], div[class*="hero-"]{background-color:rgb(27, 97, 249) !important;}
-div[class^="villian-"], div[class*="villian-"]{background-color:rgb(255, 60, 60) !important;}
-div[class^="both-"], div[class*="both-"]{background-color:rgb(165, 17, 165) !important;}
-.icon {margin:5px 10px !important;}
+div[class^="hero-"], div[class*="hero-"]{background-color:rgb(27, 97, 249);}
+div[class^="villian-"], div[class*="villian-"]{background-color:rgb(255, 60, 60);}
+div[class^="both-"], div[class*="both-"]{background-color:rgb(165, 17, 165);}
+.icon {margin:5px 10px;text-align: center;color: #fff;}
 .hero-sm, .villian-sm, .both-sm{width:20px !important;height:20px !important;}
 .hero-mm, .villian-mm, .both-mm{width:30px !important;height:30px !important;}
 .hero-bg, .villian-bg, .both-bg{width:40px !important;height:40px !important;}
@@ -176,3 +176,5 @@ footer .heading{
 }
 #charname{font-size:30px;}
 #charname label{font-weight: 200 !important;}
+
+.leaflet-marker-shadow{display: none !important;}
