@@ -55,13 +55,13 @@
             
             <div class="heading">FILTER</div>
             
-                <form action="form_action.asp">
+                <form name="cates" action="" onSubmit="return CheckForm(this)">
             <div class="filter-categories-wrapper pull-left">
                 <div class="category">
-                    <input type="checkbox" class="check _check" value="Hero"> <strong>Hero</strong>
+                    <input type="checkbox" id="heroChar" name="click_hero" class="check _check_hero" value="Hero"> <strong>Hero</strong>
                 </div>
                 <div class="category">
-                    <input type="checkbox" class="check _check" value="Villian">       <strong>Villain</strong> 
+                    <input type="checkbox" id="villainChar" name="click_villain" class="check _check_villain" value="Villain">       <strong>Villain</strong>
                      <br><br><br>
                      <button type="reset" class="pull-left btn btn btn-outline-inverse">Reset Filters</button>
  
@@ -71,28 +71,28 @@
             
             <div class="filter-wrapper pull-left">
                 <div class="pull-left filter-slider">
-                    <input  type="checkbox" value="Durability"> <label for="range0">Durability</label>
+                    <input  type="checkbox" class="check _check_durability" name="click_Durability" value="Durability"> <label for="range0">Durability</label>
                     <input type="text" id="range0" value="" name="range" />
                 </div>
                 <div class="pull-left filter-slider">
-                    <input type="checkbox" value="Fighting"> <label for="range1">Fighting</label>
+                    <input type="checkbox" class="check _check_fighting"name="click_Fighting" value="Fighting"> <label for="range1">Fighting</label>
                     <input type="text" id="range1" value="" name="range" />
                 </div>
                 <div class="pull-left filter-slider">
-                  <input type="checkbox" value="Speed"> <label for="range2">Speed</label>
+                  <input type="checkbox" name="click_Speed" class="check _check_speed" value="Speed"> <label for="range2">Speed</label>
                   <input type="text" id="range2" value="" name="range" />
                 </div>
                 <div class="clearfix"></div>
                 <div class="pull-left filter-slider">
-                  <input type="checkbox" value="Energy"> <label for="range3">Energy</label>
+                  <input type="checkbox" name="click_Energy" class="check _check_energy" value="Energy"> <label for="range3">Energy</label>
                   <input type="text" id="range3" value="" name="range" />
                 </div>
                 <div class="pull-left filter-slider">
-                  <input type="checkbox"value="Strength"> <label for="range4">Strength</label>
+                  <input type="checkbox" name="click_Strength" class="check _check_strength" value="Strength"> <label for="range4">Strength</label>
                   <input type="text" id="range4" value="" name="range" />
                 </div>
                 <div class="pull-left filter-slider">
-                  <input type="checkbox"value="Intellect"> <label for="range5">Intellect</label>
+                  <input type="checkbox" name="click_Intellect" class="check _check_intellect" value="Intellect"> <label for="range5">Intellect</label>
                   <input type="text" id="range5" value="" name="range" />
                 </div>
             </div>

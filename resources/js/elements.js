@@ -15,15 +15,195 @@ web.items.drawChart();
 
 }
 
-web.handlers=function(){
+web.handlers=function() {
+             var $aaa = $("#heroChar");
+
+
+            $aaa.on("change", function () {
+                var $this = $(this);
+
+               if($('._check_hero').is(":checked")) {
+                    console.log($('._check_hero').val());
+
+               }
+                else{
+                   console.log("hero is unchecked");
+               }
+            });
+
+      var $bbb = $("#villainChar");
+
+
+            $bbb.on("change", function () {
+                var $this = $(this);
+
+               if($('._check_villain').is(":checked")) {
+                    console.log($('._check_villain').val());
+
+               }
+                else{
+                   console.log("villain is unchecked");
+               }
+            });
+
 
 
 }
 
 
 web.items.sliders = function(){
-      $(function () {
-                    $("#range0").ionRangeSlider({
+
+          var $range = $("#range0");
+
+            $range.ionRangeSlider({
+                type: "double",
+                min: 0,
+                max: 100,
+                from: 0,
+                to: 100,
+                grid:true
+            });
+
+            $range.on("change", function () {
+                var $this = $(this),
+                    from = $this.data("from"),
+                    to = $this.data("to");
+
+               if($('._check_durability').is(":checked")) {
+                    console.log($('._check_durability').val());
+                   console.log("durability: " + from + " - " + to);
+               }
+                else{
+                   console.log("durability is unchecked");
+               }
+            });
+
+
+            var $range = $("#range1");
+            $range.ionRangeSlider({
+                type: "double",
+                min: 0,
+                max: 100,
+                from: 0,
+                to: 100,
+                grid:true
+            });
+
+            $range.on("change", function () {
+                var $this = $(this),
+                    from = $this.data("from"),
+                    to = $this.data("to");
+                if($('._check_fighting').is(":checked")) {
+                    console.log($('._check_fighting').val());
+                    console.log("fighting: " + from + " - " + to);
+                  }
+                  else{
+                   console.log("fighting is unchecked");
+                    }
+
+            });
+
+          var $range = $("#range2");
+
+            $range.ionRangeSlider({
+                type: "double",
+                min: 0,
+                max: 100,
+                from: 0,
+                to: 100,
+                grid:true
+            });
+
+            $range.on("change", function () {
+                var $this = $(this),
+                    from = $this.data("from"),
+                    to = $this.data("to");
+                 if($('._check_speed').is(":checked")) {
+                    console.log($('._check_speed').val());
+                    console.log("speed: " + from + " - " + to);
+                  }
+                  else{
+                   console.log("speed is unchecked");
+                    }
+
+            });
+
+          var $range = $("#range3");
+
+            $range.ionRangeSlider({
+                type: "double",
+                min: 0,
+                max: 100,
+                from: 0,
+                to: 100,
+                grid:true
+            });
+
+            $range.on("change", function () {
+                var $this = $(this),
+                    from = $this.data("from"),
+                    to = $this.data("to");
+                if($('._check_energy').is(":checked")) {
+                    console.log($('._check_energy').val());
+                    console.log("energy: " + from + " - " + to);
+                  }
+                  else{
+                   console.log("energy is unchecked");
+                    }
+            });
+
+          var $range = $("#range4");
+
+            $range.ionRangeSlider({
+                type: "double",
+                min: 0,
+                max: 100,
+                from: 0,
+                to: 100,
+                grid:true
+            });
+
+            $range.on("change", function () {
+                var $this = $(this),
+                    from = $this.data("from"),
+                    to = $this.data("to");
+
+               if($('._check_strength').is(":checked")) {
+                    console.log($('._check_strength').val());
+                    console.log("strength: " + from + " - " + to);
+                  }
+                  else{
+                   console.log("strength is unchecked");
+                    }
+            });
+
+          var $range = $("#range5");
+
+            $range.ionRangeSlider({
+                type: "double",
+                min: 0,
+                max: 100,
+                from: 0,
+                to: 100,
+                grid:true
+            });
+
+            $range.on("change", function () {
+                var $this = $(this),
+                    from = $this.data("from"),
+                    to = $this.data("to");
+
+                if($('._check_intellect').is(":checked")) {
+                    console.log($('._check_intellect').val());
+                    console.log("intellect: " + from + " - " + to);
+                  }
+                  else{
+                   console.log("intellect is unchecked");
+                    }
+            });
+
+
+               /*     $("#range0").ionRangeSlider({
                         hide_min_max: true,
                         keyboard: true,
                         min: 0,
@@ -109,52 +289,8 @@ web.items.sliders = function(){
                         step: 1,
                         prefix: "",
                         grid: true
-                    });
+                    });*/
 
-
-                      var $range = $("#range_48");
-
-                    $range.ionRangeSlider({
-                        type: "double",
-                        min: 0,
-                        max: 100,
-                        from: 20,
-                        to: 80
-                    });
-
-                    $range.on("change", function () {
-                        var $this = $(this),
-                            value = $this.prop("value").split(";");
-
-                        console.log(value[0] + " - " + value[1]);
-});
-
-
-
-
-
-
-
-
-
-
-
-                });
-                  $(function () {
-                    $("#range6").ionRangeSlider({
-                        hide_min_max: true,
-                        keyboard: true,
-                        min: 0,
-                        max: 100,
-                        from: 0,
-                        to: 100,
-                        type: 'double',
-                        step: 1,
-                        prefix: "",
-                        grid: true
-                    });
-
-                });
 }
 
 
