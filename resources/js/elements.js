@@ -142,7 +142,12 @@ web.items.makeMap = function(){
 			id: 'examples.map-20v6611k'
 		}).addTo(map);
 
-
+        L.marker([33.7712,-111.3877]).addTo(map);
+//        var style={};
+//            style.margin_top=$('.leaflet-marker-pane').children('img').css("marginTop");
+//            style.margin_left=$('.leaflet-marker-pane').children('img').css("margin-left");
+//        $('.leaflet-marker-pane').html("<div class='circle hero-sm icon point'>1</div>");
+//        $('.leaflet-marker-pane').children('.point').css({"margin-top":style.margin_top,"margin-left":style.margin_left})
 		// control that shows state info on hover
 		var info = L.control();
 
@@ -153,6 +158,9 @@ web.items.makeMap = function(){
 		};
 
 		info.update = function (props) {
+            if(props != undefined){
+            $("#popparent").find("._location").html(props.name);
+            }
             this._div.innerHTML = $("#popparent").html();
 //			this._div.innerHTML = '<h4>US Superhero Density</h4>' +  (props ?
 //				'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
@@ -215,9 +223,9 @@ web.items.makeMap = function(){
 
 		function onEachFeature(feature, layer) {
 			layer.on({
-				mouseover: highlightFeature,
-				mouseout: resetHighlight
-//				click: zoomToFeature
+//				mouseover: highlightFeature,
+				mouseout: resetHighlight,
+				click: highlightFeature
 			});
 		}
 
@@ -264,3 +272,36 @@ web.items.drawChart = function(){
           speed: 1000
         });
 }
+
+
+//function css(a) {
+//    var sheets = document.styleSheets, o = {};
+//    for (var i in sheets) {
+//        var rules = sheets[i].rules || sheets[i].cssRules;
+//        for (var r in rules) {
+//            if (a.is(rules[r].selectorText)) {
+//                o = $.extend(o, css2json(rules[r].style), css2json(a.attr('style')));
+//            }
+//        }
+//    }
+//    return o;
+//}
+
+//function css2json(css) {
+//    var s = {};
+//    if (!css) return s;
+//    if (css instanceof CSSStyleDeclaration) {
+//        for (var i in css) {
+//            if ((css[i]).toLowerCase) {
+//                s[(css[i]).toLowerCase()] = (css[css[i]]);
+//            }
+//        }
+//    } else if (typeof css == "string") {
+//        css = css.split("; ");
+//        for (var i in css) {
+//            var l = css[i].split(": ");
+//            s[l[0].toLowerCase()] = (l[1]);
+//        }
+//    }
+//    return s;
+//}

@@ -52,3 +52,373 @@ var statesData = {"type":"FeatureCollection","features":[
 {"type":"Feature","id":"56","properties":{"name":"Wyoming","density":5.851},"geometry":{"type":"Polygon","coordinates":[[[-109.080842,45.002073],[-105.91517,45.002073],[-104.058488,44.996596],[-104.053011,43.002989],[-104.053011,41.003906],[-105.728954,40.998429],[-107.919731,41.003906],[-109.04798,40.998429],[-111.047063,40.998429],[-111.047063,42.000709],[-111.047063,44.476286],[-111.05254,45.002073],[-109.080842,45.002073]]]}},
 {"type":"Feature","id":"72","properties":{"name":"Puerto Rico","density":1082 },"geometry":{"type":"Polygon","coordinates":[[[-66.448338,17.984326],[-66.771478,18.006234],[-66.924832,17.929556],[-66.985078,17.973372],[-67.209633,17.956941],[-67.154863,18.19245],[-67.269879,18.362235],[-67.094617,18.515589],[-66.957694,18.488204],[-66.409999,18.488204],[-65.840398,18.433435],[-65.632274,18.367712],[-65.626797,18.203403],[-65.730859,18.186973],[-65.834921,18.017187],[-66.234737,17.929556],[-66.448338,17.984326]]]}}
 ]};
+
+
+//$("#superherodata").load("resources/js/superhero_data.json",function(){
+//console.log($("#superherodata"));
+//});
+
+
+
+var superheroData=[
+  {
+    "Name":"A-Bomb",
+    "Location":"Scarsdale, Arizona",
+    "State":"AZ",
+    "Lat":33.7712,
+    "Long":-111.3877,
+    "Strength":100,
+    "Speed":17,
+    "Durability":80,
+    "Power":17,
+    "Combat":64
+  },
+  {
+    "Name":"Moonstone",
+    "Location":"Van Nuys, California",
+    "State":"CA",
+    "Lat":36.17,
+    "Long":-119.7462,
+    "Strength":67,
+    "Speed":47,
+    "Durability":52,
+    "Power":79,
+    "Combat":80
+  },
+  {
+    "Name":"Jubilee",
+    "Location":"Beverly Hills, California",
+    "State":"CA",
+    "Lat":36.17,
+    "Long":-119.7463,
+    "Strength":8,
+    "Speed":22,
+    "Durability":20,
+    "Power":66,
+    "Combat":90
+  },
+  {
+    "Name":"Machine Man",
+    "Location":"Central City, California",
+    "State":"CA",
+    "Lat":36.17,
+    "Long":-119.7464,
+    "Strength":32,
+    "Speed":35,
+    "Durability":84,
+    "Power":51,
+    "Combat":64
+  },
+  {
+    "Name":"Mister Fantastic",
+    "Location":"Central City, California",
+    "State":"CA",
+    "Lat":36.17,
+    "Long":-119.7465,
+    "Strength":10,
+    "Speed":18,
+    "Durability":70,
+    "Power":32,
+    "Combat":64
+  },
+  {
+    "Name":"Green Goblin",
+    "Location":"Hartford, Connecticut",
+    "State":"CT",
+    "Lat":41.5834,
+    "Long":-72.7622,
+    "Strength":48,
+    "Speed":35,
+    "Durability":48,
+    "Power":38,
+    "Combat":28
+  },
+  {
+    "Name":"Jack of Hearts",
+    "Location":"New Haven, Connecticut",
+    "State":"CT",
+    "Lat":41.5834,
+    "Long":-72.7623,
+    "Strength":55,
+    "Speed":100,
+    "Durability":30,
+    "Power":70,
+    "Combat":30
+  },
+  {
+    "Name":"Jennifer Kale",
+    "Location":"Citrusville, Florida",
+    "State":"FL",
+    "Lat":27.8333,
+    "Long":-81.717,
+    "Strength":10,
+    "Speed":35,
+    "Durability":42,
+    "Power":61,
+    "Combat":72
+  },
+  {
+    "Name":"Ant-Man 2",
+    "Location":"Coral Gables, Florida",
+    "State":"FL",
+    "Lat":27.8333,
+    "Long":-81.7171,
+    "Strength":10,
+    "Speed":23,
+    "Durability":28,
+    "Power":32,
+    "Combat":28
+  },
+  {
+    "Name":"Lizard",
+    "Location":"Coral Gables, Florida",
+    "State":"FL",
+    "Lat":27.8333,
+    "Long":-81.7172,
+    "Strength":51,
+    "Speed":27,
+    "Durability":70,
+    "Power":40,
+    "Combat":56
+  },
+  {
+    "Name":"Domino",
+    "Location":"Everglades, Florida",
+    "State":"FL",
+    "Lat":27.8333,
+    "Long":-81.7173,
+    "Strength":10,
+    "Speed":27,
+    "Durability":28,
+    "Power":49,
+    "Combat":74
+  },
+  {
+    "Name":"Moon Knight",
+    "Location":"Chicago, Illinois",
+    "State":"IL",
+    "Lat":40.3363,
+    "Long":-89.0022,
+    "Strength":36,
+    "Speed":23,
+    "Durability":42,
+    "Power":28,
+    "Combat":75
+  },
+  {
+    "Name":"Battlestar",
+    "Location":"Chicago, Illinois",
+    "State":"IL",
+    "Lat":40.3363,
+    "Long":-89.0023,
+    "Strength":53,
+    "Speed":35,
+    "Durability":74,
+    "Power":48,
+    "Combat":74
+  },
+  {
+    "Name":"Hawkeye",
+    "Location":"Waverly, lowa",
+    "State":"IA",
+    "Lat":42.0046,
+    "Long":-93.214,
+    "Strength":12,
+    "Speed":23,
+    "Durability":14,
+    "Power":26,
+    "Combat":80
+  },
+  {
+    "Name":"Flash 1",
+    "Location":"Hibbardsville, Kansas",
+    "State":"KS",
+    "Lat":38.5111,
+    "Long":-96.8005,
+    "Strength":10,
+    "Speed":100,
+    "Durability":50,
+    "Power":57,
+    "Combat":32
+  },
+  {
+    "Name":"Black Knight III",
+    "Location":"Gloucester, Massachusetts",
+    "State":"MA",
+    "Lat":42.2373,
+    "Long":-71.5314,
+    "Strength":10,
+    "Speed":8,
+    "Durability":70,
+    "Power":43,
+    "Combat":70
+  },
+  {
+    "Name":"Ultron",
+    "Location":"Cresskill, New Jersey",
+    "State":"NJ",
+    "Lat":40.314,
+    "Long":-74.5089,
+    "Strength":83,
+    "Speed":42,
+    "Durability":100,
+    "Power":100,
+    "Combat":64
+  },
+  {
+    "Name":"Wonder Man",
+    "Location":"Paterson, New Jersey",
+    "State":"NJ",
+    "Lat":40.314,
+    "Long":-74.509,
+    "Strength":100,
+    "Speed":53,
+    "Durability":90,
+    "Power":64,
+    "Combat":64
+  },
+  {
+    "Name":"Invisible Woman",
+    "Location":"Glenville, Long Island, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9384,
+    "Strength":10,
+    "Speed":27,
+    "Durability":70,
+    "Power":74,
+    "Combat":56
+  },
+  {
+    "Name":"Iron Man",
+    "Location":"Long Island, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9385,
+    "Strength":85,
+    "Speed":58,
+    "Durability":85,
+    "Power":100,
+    "Combat":64
+  },
+  {
+    "Name":"Spider-Girl",
+    "Location":"New York City, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9386,
+    "Strength":38,
+    "Speed":60,
+    "Durability":65,
+    "Power":46,
+    "Combat":75
+  },
+  {
+    "Name":"Spider-Man",
+    "Location":"New York, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9387,
+    "Strength":55,
+    "Speed":60,
+    "Durability":74,
+    "Power":58,
+    "Combat":85
+  },
+  {
+    "Name":"Storm",
+    "Location":"New York, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9388,
+    "Strength":10,
+    "Speed":47,
+    "Durability":30,
+    "Power":88,
+    "Combat":75
+  },
+  {
+    "Name":"Venom",
+    "Location":"New York, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9389,
+    "Strength":57,
+    "Speed":65,
+    "Durability":84,
+    "Power":79,
+    "Combat":84
+  },
+  {
+    "Name":"Black Cat",
+    "Location":"Queens, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.939,
+    "Strength":16,
+    "Speed":33,
+    "Durability":10,
+    "Power":23,
+    "Combat":70
+  },
+  {
+    "Name":"Spider-Woman III",
+    "Location":"Rochester, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9391,
+    "Strength":48,
+    "Speed":27,
+    "Durability":42,
+    "Power":60,
+    "Combat":28
+  },
+  {
+    "Name":"Vulture",
+    "Location":"Staten Island, New York City",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9392,
+    "Strength":22,
+    "Speed":47,
+    "Durability":56,
+    "Power":40,
+    "Combat":56
+  },
+  {
+    "Name":"Sandman",
+    "Location":"Queens, New York",
+    "State":"NY",
+    "Lat":42.1497,
+    "Long":-74.9393,
+    "Strength":75,
+    "Speed":47,
+    "Durability":97,
+    "Power":62,
+    "Combat":56
+  },
+  {
+    "Name":"Hulk",
+    "Location":"Dayton, Ohio",
+    "State":"OH",
+    "Lat":40.3736,
+    "Long":-82.7755,
+    "Strength":100,
+    "Speed":47,
+    "Durability":100,
+    "Power":41,
+    "Combat":85
+  },
+  {
+    "Name":"Dagger",
+    "Location":"Shaker Heights, Ohio",
+    "State":"OH",
+    "Lat":40.3736,
+    "Long":-82.7756,
+    "Strength":10,
+    "Speed":35,
+    "Durability":42,
+    "Power":52,
+    "Combat":70
+  }
+];
