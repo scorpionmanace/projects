@@ -131,7 +131,7 @@ web.items.sliders = function(){
 
 
 web.items.makeMap = function(){
-    var map = L.map('map').setView([36.8, -76],4);
+    var map = L.map('map').setView([38.8, -70],4);
 
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			maxZoom: 4,
@@ -153,9 +153,10 @@ web.items.makeMap = function(){
 		};
 
 		info.update = function (props) {
-			this._div.innerHTML = '<h4>US Superhero Density</h4>' +  (props ?
-				'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-				: 'Hover over a points');
+            this._div.innerHTML = $("#popparent").html();
+//			this._div.innerHTML = '<h4>US Superhero Density</h4>' +  (props ?
+//				'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+//				: 'Hover over a points');
 		};
 
 		info.addTo(map);
@@ -236,7 +237,7 @@ web.items.makeMap = function(){
 //				grades = [0, 10, 20, 50, 100, 200, 500, 1000],
                 categories= ["Hero", "Villian", "Both"],
 				labels = [],
-                color=["rgb(90, 90, 239)","rgb(255, 60, 60)","rgb(165, 17, 165)"],
+                color=["rgb(27, 97, 249)","rgb(255, 60, 60)","rgb(165, 17, 165)"],
 				from, to;
             
 			for (var i = 0; i < categories.length; i++) {
