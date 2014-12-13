@@ -170,12 +170,27 @@ web.items.makeMap = function(){
 			id: 'examples.map-20v6611k'
 		}).addTo(map);
 
-        L.marker([33.7712,-111.3877]).addTo(map);
+            $.each(superheroData,function(key,value){
+                console.log(key + " " + value);
+            var _count='<div>'+20+'</div>';
+            var icon=L.divIcon({html:_count,className:"circle hero-sm icon point"});
+            
+            L.marker([value.Lat,value.Long], {icon: icon}).addTo(map);
+            });
+    
+//            L.circle([33.7712,-111.3877], 100, {
+//                color: 'red',
+//                fillColor: 'red',
+//                fillOpacity: 1.0,
+//                content: "9"
+//            }).bindPopup("karan").addTo(map);
+//        L.marker([33.7712,-111.3877]).bindPopup($("#popparent").html()).addTo(map);
 //        var style={};
 //            style.margin_top=$('.leaflet-marker-pane').children('img').css("marginTop");
 //            style.margin_left=$('.leaflet-marker-pane').children('img').css("margin-left");
+//            style.transform_point=$('.leaflet-marker-pane').children('img').css("transform");
 //        $('.leaflet-marker-pane').html("<div class='circle hero-sm icon point'>1</div>");
-//        $('.leaflet-marker-pane').children('.point').css({"margin-top":style.margin_top,"margin-left":style.margin_left})
+//        $('.leaflet-marker-pane').children('.point').css({"margin-top":style.margin_top,"margin-left":style.margin_left,"transform":style.transform_point});
 		// control that shows state info on hover
 		var info = L.control();
 
@@ -252,8 +267,8 @@ web.items.makeMap = function(){
 		function onEachFeature(feature, layer) {
 			layer.on({
 //				mouseover: highlightFeature,
-				mouseout: resetHighlight,
-				click: highlightFeature
+//				mouseout: resetHighlight,
+//				click: highlightFeature
 			});
 		}
 
