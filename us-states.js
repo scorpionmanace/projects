@@ -63,6 +63,7 @@ var statesData = {"type":"FeatureCollection","features":[
 var superheroData=[
   {
     "Name":"A-Bomb",
+    "Alignment":"bad",
     "Location":"Scarsdale, Arizona",
     "State":"AZ",
     "Lat":33.7712,
@@ -75,6 +76,7 @@ var superheroData=[
   },
   {
     "Name":"Moonstone",
+    "Alignment":"good",
     "Location":"Van Nuys, California",
     "State":"CA",
     "Lat":36.17,
@@ -87,6 +89,7 @@ var superheroData=[
   },
   {
     "Name":"Jubilee",
+    "Alignment":"good",
     "Location":"Beverly Hills, California",
     "State":"CA",
     "Lat":36.17,
@@ -99,6 +102,7 @@ var superheroData=[
   },
   {
     "Name":"Machine Man",
+    "Alignment":"good",
     "Location":"Central City, California",
     "State":"CA",
     "Lat":36.17,
@@ -111,6 +115,7 @@ var superheroData=[
   },
   {
     "Name":"Mister Fantastic",
+    "Alignment":"good",
     "Location":"Central City, California",
     "State":"CA",
     "Lat":36.17,
@@ -123,6 +128,7 @@ var superheroData=[
   },
   {
     "Name":"Green Goblin",
+    "Alignment":"bad",
     "Location":"Hartford, Connecticut",
     "State":"CT",
     "Lat":41.5834,
@@ -135,6 +141,7 @@ var superheroData=[
   },
   {
     "Name":"Jack of Hearts",
+    "Alignment":"good",
     "Location":"New Haven, Connecticut",
     "State":"CT",
     "Lat":41.5834,
@@ -147,6 +154,7 @@ var superheroData=[
   },
   {
     "Name":"Jennifer Kale",
+    "Alignment":"good",
     "Location":"Citrusville, Florida",
     "State":"FL",
     "Lat":27.8333,
@@ -159,6 +167,7 @@ var superheroData=[
   },
   {
     "Name":"Ant-Man 2",
+    "Alignment":"good",
     "Location":"Coral Gables, Florida",
     "State":"FL",
     "Lat":27.8333,
@@ -171,6 +180,7 @@ var superheroData=[
   },
   {
     "Name":"Lizard",
+    "Alignment":"bad",
     "Location":"Coral Gables, Florida",
     "State":"FL",
     "Lat":27.8333,
@@ -183,6 +193,7 @@ var superheroData=[
   },
   {
     "Name":"Domino",
+    "Alignment":"good",
     "Location":"Everglades, Florida",
     "State":"FL",
     "Lat":27.8333,
@@ -195,6 +206,7 @@ var superheroData=[
   },
   {
     "Name":"Moon Knight",
+    "Alignment":"good",
     "Location":"Chicago, Illinois",
     "State":"IL",
     "Lat":40.3363,
@@ -207,6 +219,7 @@ var superheroData=[
   },
   {
     "Name":"Battlestar",
+    "Alignment":"good",
     "Location":"Chicago, Illinois",
     "State":"IL",
     "Lat":40.3363,
@@ -219,6 +232,7 @@ var superheroData=[
   },
   {
     "Name":"Hawkeye",
+    "Alignment":"good",
     "Location":"Waverly, lowa",
     "State":"IA",
     "Lat":42.0046,
@@ -231,6 +245,7 @@ var superheroData=[
   },
   {
     "Name":"Flash 1",
+    "Alignment":"good",
     "Location":"Hibbardsville, Kansas",
     "State":"KS",
     "Lat":38.5111,
@@ -243,6 +258,7 @@ var superheroData=[
   },
   {
     "Name":"Black Knight III",
+    "Alignment":"good",
     "Location":"Gloucester, Massachusetts",
     "State":"MA",
     "Lat":42.2373,
@@ -255,6 +271,7 @@ var superheroData=[
   },
   {
     "Name":"Ultron",
+    "Alignment":"bad",
     "Location":"Cresskill, New Jersey",
     "State":"NJ",
     "Lat":40.314,
@@ -267,6 +284,7 @@ var superheroData=[
   },
   {
     "Name":"Wonder Man",
+    "Alignment":"good",
     "Location":"Paterson, New Jersey",
     "State":"NJ",
     "Lat":40.314,
@@ -279,6 +297,7 @@ var superheroData=[
   },
   {
     "Name":"Invisible Woman",
+    "Alignment":"good",
     "Location":"Glenville, Long Island, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -291,6 +310,7 @@ var superheroData=[
   },
   {
     "Name":"Iron Man",
+    "Alignment":"good",
     "Location":"Long Island, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -303,6 +323,7 @@ var superheroData=[
   },
   {
     "Name":"Spider-Girl",
+    "Alignment":"good",
     "Location":"New York City, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -315,6 +336,7 @@ var superheroData=[
   },
   {
     "Name":"Spider-Man",
+    "Alignment":"good",
     "Location":"New York, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -327,6 +349,7 @@ var superheroData=[
   },
   {
     "Name":"Storm",
+    "Alignment":"good",
     "Location":"New York, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -339,6 +362,7 @@ var superheroData=[
   },
   {
     "Name":"Venom",
+    "Alignment":"bad",
     "Location":"New York, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -351,6 +375,7 @@ var superheroData=[
   },
   {
     "Name":"Black Cat",
+    "Alignment":"good",
     "Location":"Queens, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -363,6 +388,7 @@ var superheroData=[
   },
   {
     "Name":"Spider-Woman III",
+    "Alignment":"good",
     "Location":"Rochester, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -375,6 +401,7 @@ var superheroData=[
   },
   {
     "Name":"Vulture",
+    "Alignment":"bad",
     "Location":"Staten Island, New York City",
     "State":"NY",
     "Lat":42.1497,
@@ -387,6 +414,7 @@ var superheroData=[
   },
   {
     "Name":"Sandman",
+    "Alignment":"bad",
     "Location":"Queens, New York",
     "State":"NY",
     "Lat":42.1497,
@@ -399,6 +427,7 @@ var superheroData=[
   },
   {
     "Name":"Hulk",
+    "Alignment":"good",
     "Location":"Dayton, Ohio",
     "State":"OH",
     "Lat":40.3736,
@@ -411,6 +440,7 @@ var superheroData=[
   },
   {
     "Name":"Dagger",
+    "Alignment":"good",
     "Location":"Shaker Heights, Ohio",
     "State":"OH",
     "Lat":40.3736,
@@ -422,3 +452,58 @@ var superheroData=[
     "Combat":70
   }
 ];
+
+var loc_items={
+    "NY":{
+        "count":0,
+        "hero":0,
+        "villian":0},
+    "OH":{
+        "count":0,
+        "hero":0,
+        "villian":0
+    },
+    "CA":{
+        "count":0,
+        "hero":0,
+        "villian":0
+    },
+    "AZ":{
+        "count":0,
+        "hero":0,
+        "villian":0
+    },
+    "NJ":{
+        "count":0,
+        "hero":0,
+        "villian":0
+    },
+    "KS":{
+        "count":0,
+        "hero":0,
+        "villian":0
+         },"MA":{
+             "count":0,
+             "hero":0,
+             "villian":0
+         },
+    "IA":{
+        "count":0,
+        "hero":0,
+        "villian":0
+    },
+    "IL":{
+        "count":0,
+        "hero":0,
+        "villian":0
+    },
+    "FL":{
+        "count":0,
+        "hero":0,
+        "villian":0
+    },
+    "CT":{
+        "count":0,
+        "hero":0,
+        "villian":0}
+};
