@@ -59,8 +59,8 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 0,
-                to: 100,
+                from: 20,
+                to: 80,
                 grid:true
             });
 
@@ -84,8 +84,8 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 0,
-                to: 100,
+                from: 20,
+                to: 80,
                 grid:true
             });
 
@@ -109,8 +109,8 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 0,
-                to: 100,
+                from: 20,
+                to: 80,
                 grid:true
             });
 
@@ -134,8 +134,8 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 0,
-                to: 100,
+                from: 20,
+                to: 80,
                 grid:true
             });
 
@@ -158,8 +158,8 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 0,
-                to: 100,
+                from: 20,
+                to: 80,
                 grid:true
             });
 
@@ -183,8 +183,8 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 0,
-                to: 100,
+                from: 20,
+                to: 80,
                 grid:true
             });
 
