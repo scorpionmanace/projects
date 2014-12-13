@@ -1,0 +1,26 @@
+.clearfix:after{content:" ";visibility:hidden;display:block;height:0;clear:both}
+.chart-horiz .chart{width:28%}
+.chart-horiz
+.chart li{display:block;height:30px;margin-top:3px;position:relative}
+.chart-horiz .chart li:before{color:ivory;content:attr(title);left:5px;position:absolute}
+.chart-horiz .chart li.title:before{color:black;font-weight:bold;left:0}
+.chart-horiz .chart li:first-child{margin-top:0}
+.chart-horiz .chart li .bar2{background:black;height:100%}
+.chart-horiz .chart li .number{color:black;font-size:22px;font-weight:bold;padding-left:3px;position:absolute;top:-2px}
+.chart-horiz .chart li.Durability .number{color:#a9a9a9}
+.chart-horiz .chart li.Durability .bar2{background:darkred}
+.chart-horiz .chart li.Energy .number{color:#a9a9a9}
+.chart-horiz .chart li.Energy .bar2{background:darkolivegreen}
+.chart-horiz .chart li.Strength .number{color:#a9a9a9}
+.chart-horiz .chart li.Strength .bar2{background:darkgoldenrod}
+.chart-horiz .chart li.Fighting .number{color:#a9a9a9}
+.chart-horiz .chart li.Fighting .bar2{background:darkmagenta}
+.chart-horiz .chart li.Speed .number{color:#a9a9a9}
+.chart-horiz .chart li.Speed .bar2{background:darkblue}
+.chart-horiz .chart li.Intellect .bar2{background:darkslategrey}
+.chart-horiz .chart li.Intellect .number{color:#a9a9a9}@media screen
+ and (max-width: 480px){.chart-horiz .chart li{height:auto}
+.chart-horiz .chart li:before{color:black;display:block;left:0;position:relative}
+.chart-horiz .chart li.title:before{border-bottom:1px solid}
+.chart-horiz .chart li .bar2{height:23px}
+.chart-horiz .chart li .number{display:block;left:0 !important;padding-left:0;position:relative;top:-10px}}

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Superheroes of United States</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="resources/js/jquery-2.1.1.min.js"></script>
+    
+    
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="resources/css/stylesheet.css" />
+
+    
+    <link rel="stylesheet" href="resources/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="resources/css/ion.rangeSlider.skinFlat.css" />
+    <script src="resources/js/ion.rangeSlider.js"></script>
+    
+    
+</head>
+<body>
+    <header>
+        <div class="heading pull-left">
+            <h1 class="lead"><Strong>Marvel</Strong> Origins</h1>
+        </div>
+        <div class="options pull-right">
+                <div class="form-group pull-left" style="font-size: 20px; color: darkgrey">
+                      <input type="text" class="pull-left" placeholder="character name">
+                     <span class="pull-left">OR</span>
+                      <input type="text" class="pull-left" placeholder="location">
+                  </div>
+                <button type="submit" class="pull-left btn btn btn-outline-inverse">Search</button>
+        </div>
+        <div class="clearfix"></div>
+    </header>
+
+    
+    
+    <div id="map-container">
+    <div id="map"></div>
+    </div>
+    <div class="clearfix"></div>
+    <footer>
+        <div class="filter-container" id="filter-container">
+            
+            <div class="heading">FILTER</div>
+            
+            
+            <div class="filter-categories-wrapper pull-left">
+                <div class="category">
+                    <input type="checkbox" class="check _check" value="Hero"> <strong>Hero</strong>
+                </div>
+                <div class="clearfix"></div>
+                <div class="category">
+                    <input type="checkbox" class="check _check" value="Villian">       <strong>Villain</strong> 
+                </div>
+            </div>
+            
+            
+            <div class="filter-wrapper pull-left">
+                <div class="pull-left filter-slider">
+                    <input  type="checkbox"> <label for="range0">Durability</label>
+                    <input type="text" id="range0" value="" name="range" />
+                </div>
+                <div class="pull-left filter-slider">
+                    <input type="checkbox"> <label for="range1">Fighting</label>
+                    <input type="text" id="range1" value="" name="range" />
+                </div>
+                <div class="pull-left filter-slider">
+                  <input type="checkbox"> <label for="range2">Speed</label>
+                  <input type="text" id="range2" value="" name="range" />
+                </div>
+                <div class="clearfix"></div>
+                <div class="pull-left filter-slider">
+                  <input type="checkbox"> <label for="range3">Energy</label>
+                  <input type="text" id="range3" value="" name="range" />
+                </div>
+                <div class="pull-left filter-slider">
+                  <input type="checkbox"> <label for="range4">Strength</label>
+                  <input type="text" id="range4" value="" name="range" />
+                </div>
+                <div class="pull-left filter-slider">
+                  <input type="checkbox"> <label for="range5">Intellect</label>
+                  <input type="text" id="range5" value="" name="range" />
+                </div>
+            </div>
+            <div class="result-submit-wrapper pull-left">
+                <button type="submit" class="pull-left btn btn btn-outline-inverse btn-lg">Reset Filters</button>
+            </div>
+        </div>
+    </footer>
+    <div class="clearfix"></div>
+    <div class="popover-superhero" id="popsuper">
+        <div class="image-wrapper pull-left">
+            <img class="_image" src="resources/img/photo.jpg" style="width:100%;height:100%;"/>
+            <div class="clearfix"></div>
+        </div>
+        <div class="info-wrapper pull-left">
+            <div class="header-area">
+                <div class="navigation-left pull-left active">&lt</div>
+                <div class="central-count pull-left"><span class="current-count _current-count">1</span> Of <span class="total-count _total-count"> 2 </span></div>
+                <div class="navigation-right pull-left">&gt</div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="content-area">
+                <div class="content-into">
+                    <div class="character-name _name" id="charname">
+                        <label class="pull-left">Mephsito</label>
+                        <div class="icon villian-mm circle pull-left"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="alias-wrapper">Alias : <span class="alias _alias">Satan</span></div>
+                    <div class="clearfix"></div>
+                    <div class="location-wrapper">Location: <span class="location _location">Chicago, Illinois</span></div>
+                </div>
+                
+                <div class="graph-info chart-horiz">
+                    <ul class="chart">
+               <!-- <li class="title" title="TITLE 1"></li>-->
+        		<li class="Intellect" title="Intellect"><span class="bar2" data-number="30" style="display: inline-block; width: 30%;"></span><span class="number" style="left: 30%;">100</span></li>
+        		<li class="Durability" title="Durability"><span class="bar2" data-number="60" style="display: inline-block; width: 60%;"></span><span class="number" style="left: 60%;">80</span></li>
+        		<li class="Speed" title="Speed"><span class="bar2" data-number="80" style="display: inline-block; width: 80%;"></span><span class="number" style="left: 80%;">40</span></li>
+        		<li class="Strength" title="Strength"><span class="bar2" data-number="100" style="display: inline-block; width: 100%;"></span><span class="number" style="left: 100%;">80</span></li>
+                <li class="Fighting" title="Fighting"><span class="bar2" data-number="100" style="display: inline-block; width: 100%;"></span><span class="number" style="left: 100%;">90</span></li>
+                 <li class="Energy" title="Energy"><span class="bar2" data-number="20" style="display: inline-block; width: 20%;"></span><span class="number" style="left: 20%;">30</span></li>
+               </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+    
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script type="text/javascript" src="us-states.js"></script>
+    
+    <link rel="stylesheet" href="resources/css/horizBarChart.css"/>
+    <script src="resources/js/jquery.horizBarChart.min.js"></script>
+	<script src="resources/js/elements.js"></script>
+</body>
+</html>
