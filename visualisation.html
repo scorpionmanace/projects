@@ -55,7 +55,7 @@
             
             <div class="heading">FILTER</div>
             
-            
+                <form action="form_action.asp">
             <div class="filter-categories-wrapper pull-left">
                 <div class="category">
                     <input type="checkbox" class="check _check" value="Hero"> <strong>Hero</strong>
@@ -63,39 +63,43 @@
                 <div class="clearfix"></div>
                 <div class="category">
                     <input type="checkbox" class="check _check" value="Villian">       <strong>Villain</strong> 
+                     <br><br><br>
+                     <button type="reset" class="pull-left btn btn btn-outline-inverse">Reset Filters</button>
+ 
                 </div>
             </div>
             
             
             <div class="filter-wrapper pull-left">
                 <div class="pull-left filter-slider">
-                    <input  type="checkbox"> <label for="range0">Durability</label>
+                    <input  type="checkbox" value="Durability"> <label for="range0">Durability</label>
                     <input type="text" id="range0" value="" name="range" />
                 </div>
                 <div class="pull-left filter-slider">
-                    <input type="checkbox"> <label for="range1">Fighting</label>
+                    <input type="checkbox" value="Fighting"> <label for="range1">Fighting</label>
                     <input type="text" id="range1" value="" name="range" />
                 </div>
                 <div class="pull-left filter-slider">
-                  <input type="checkbox"> <label for="range2">Speed</label>
+                  <input type="checkbox" value="Speed"> <label for="range2">Speed</label>
                   <input type="text" id="range2" value="" name="range" />
                 </div>
                 <div class="clearfix"></div>
                 <div class="pull-left filter-slider">
-                  <input type="checkbox"> <label for="range3">Energy</label>
+                  <input type="checkbox" value="Energy"> <label for="range3">Energy</label>
                   <input type="text" id="range3" value="" name="range" />
                 </div>
                 <div class="pull-left filter-slider">
-                  <input type="checkbox"> <label for="range4">Strength</label>
+                  <input type="checkbox"value="Strength"> <label for="range4">Strength</label>
                   <input type="text" id="range4" value="" name="range" />
                 </div>
                 <div class="pull-left filter-slider">
-                  <input type="checkbox"> <label for="range5">Intellect</label>
+                  <input type="checkbox"value="Intellect"> <label for="range5">Intellect</label>
                   <input type="text" id="range5" value="" name="range" />
                 </div>
             </div>
-            <div class="result-submit-wrapper pull-left">
-                <button type="submit" class="pull-left btn btn btn-outline-inverse btn-lg">Reset Filters</button>
+            <div class="result-submit-wrapper pull-left">  
+        			  <input type="button" onclick="myFunction()" value="Send">
+        	            <input type="text" id="filters" size="40">
             </div>
         </div>
     </footer>
@@ -154,5 +158,19 @@
     <link rel="stylesheet" href="resources/css/horizBarChart.css"/>
     <script src="resources/js/jquery.horizBarChart.min.js"></script>
 	<script src="resources/js/elements.js"></script>
+	
+	<script>
+function myFunction() {
+    var range = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < range.length; i++) {
+        if (range[i].checked) {
+            txt = txt + range[i].value + " ";
+        }
+    }
+    document.getElementById("filters").value = "checked: " + txt;
+}
+</script>
 </body>
 </html>
