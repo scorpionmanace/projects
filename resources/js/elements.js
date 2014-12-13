@@ -169,15 +169,59 @@ web.items.makeMap = function(){
 				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 			id: 'examples.map-20v6611k'
 		}).addTo(map);
-
+    
+        $(function(){
+            var icon;
+//            var _characters = [];
+            var _locitems=loc_items;
             $.each(superheroData,function(key,value){
                 console.log(key + " " + value);
-            var _count='<div>'+20+'</div>';
-            var icon=L.divIcon({html:_count,className:"circle hero-sm icon point"});
+            _locitems[value.State].count++;
+                _locitems[value.State].Lat=value.Lat;
+                _locitems[value.State].Long=value.Long;
+                if(typeof _locitems[value.State].characters === "undefined"){
+                    _locitems[value.State].characters=[];
+                }
+                _locitems[value.State].characters.push(value.Name);
+
+
+            if(value.Alignment ==="good"){
+                _locitems[value.State].hero++;
+//                icon=L.divIcon({html:_count,className:"circle hero-sm icon point"});
+            }
+            else if(value.Alignment==="bad"){
+                _locitems[value.State].villian++;
+//                icon=L.divIcon({html:_count,className:"circle villian-sm icon point"});    
+            }
+            web.data.info=_locitems;    
             
-            L.marker([value.Lat,value.Long], {icon: icon}).addTo(map);
+//            L.marker([value.Lat,value.Long], {icon: icon}).addTo(map);
             });
+            
+        });
     
+    
+            $(function(){
+            var size;
+            var _locitems=web.data.info;
+            $.each(_locitems,function(key,value){
+                size=value.count*2 +20;
+                if(value.hero>0 && value.villian>0){
+                    icon=L.divIcon({html:value.count,className:"circle both-sm icon point",iconSize: L.point(size, size)});
+                }
+                else if(value.hero>0){
+                    icon=L.divIcon({html:value.count,className:"circle hero-sm icon point",iconSize : L.point(size, size)});
+                }
+                else{
+                    icon=L.divIcon({html:value.count,className:"circle villian-sm icon point",iconSize : L.point(size, size)});
+                }
+               L.marker([value.Lat,value.Long], {icon: icon}).addTo(map); 
+//                $('div[class*="hero-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
+//                $('div[class*="villian-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
+//                $('div[class*="both-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
+//                $('.point.icon').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
+            });
+            });
 //            L.circle([33.7712,-111.3877], 100, {
 //                color: 'red',
 //                fillColor: 'red',
