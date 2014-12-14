@@ -72,7 +72,7 @@ var superheroData=[
     "Strength":100,
     "Speed":17,
     "Durability":80,
-    "Power":17,
+    "Fighting":17,
     "Combat":64,
     "CharImg":"resources/charImg/A-Bomb.jpg"
   },
@@ -87,7 +87,7 @@ var superheroData=[
     "Strength":67,
     "Speed":47,
     "Durability":52,
-    "Power":79,
+    "Fighting":79,
     "Combat":80,
     "CharImg":"resources/charImg/Moonstone.jpeg"
   },
@@ -102,7 +102,7 @@ var superheroData=[
     "Strength":8,
     "Speed":22,
     "Durability":20,
-    "Power":66,
+    "Fighting":66,
     "Combat":90,
     "CharImg":"resources/charImg/Jubilee.jpeg"
   },
@@ -117,7 +117,7 @@ var superheroData=[
     "Strength":32,
     "Speed":35,
     "Durability":84,
-    "Power":51,
+    "Fighting":51,
     "Combat":64,
     "CharImg":"resources/charImg/Machine_Man.jpeg"
   },
@@ -132,7 +132,7 @@ var superheroData=[
     "Strength":10,
     "Speed":18,
     "Durability":70,
-    "Power":32,
+    "Fighting":32,
     "Combat":64,
     "CharImg":"resources/charImg/Mister_Fantastic.jpeg"
   },
@@ -147,7 +147,7 @@ var superheroData=[
     "Strength":48,
     "Speed":35,
     "Durability":48,
-    "Power":38,
+    "Fighting":38,
     "Combat":28,
     "CharImg":"resources/charImg/Green_Goblin.jpeg"
   },
@@ -162,7 +162,7 @@ var superheroData=[
     "Strength":55,
     "Speed":100,
     "Durability":30,
-    "Power":70,
+    "Fighting":70,
     "Combat":30,
     "CharImg":"resources/charImg/Jack_of_Hearts.jpeg"
   },
@@ -177,7 +177,7 @@ var superheroData=[
     "Strength":10,
     "Speed":35,
     "Durability":42,
-    "Power":61,
+    "Fighting":61,
     "Combat":72,
     "CharImg":"resources/charImg/Jennifer_Kale.jpeg"
   },
@@ -192,7 +192,7 @@ var superheroData=[
     "Strength":10,
     "Speed":23,
     "Durability":28,
-    "Power":32,
+    "Fighting":32,
     "Combat":28,
     "CharImg":"resources/charImg/Ant-Man_2.jpeg"
   },
@@ -207,7 +207,7 @@ var superheroData=[
     "Strength":51,
     "Speed":27,
     "Durability":70,
-    "Power":40,
+    "Fighting":40,
     "Combat":56,
     "CharImg":"resources/charImg/Lizard.jpeg"
   },
@@ -222,7 +222,7 @@ var superheroData=[
     "Strength":10,
     "Speed":27,
     "Durability":28,
-    "Power":49,
+    "Fighting":49,
     "Combat":74,
     "CharImg":"resources/charImg/Domino.jpeg"
   },
@@ -237,7 +237,7 @@ var superheroData=[
     "Strength":36,
     "Speed":23,
     "Durability":42,
-    "Power":28,
+    "Fighting":28,
     "Combat":75,
     "CharImg":"resources/charImg/Moon_Knight.jpeg"
   },
@@ -252,7 +252,7 @@ var superheroData=[
     "Strength":53,
     "Speed":35,
     "Durability":74,
-    "Power":48,
+    "Fighting":48,
     "Combat":74,
     "CharImg":"resources/charImg/battlestar.jpeg"
   },
@@ -267,7 +267,7 @@ var superheroData=[
     "Strength":12,
     "Speed":23,
     "Durability":14,
-    "Power":26,
+    "Fighting":26,
     "Combat":80,
     "CharImg":"resources/charImg/Hawkeye.jpeg"
   },
@@ -282,7 +282,7 @@ var superheroData=[
     "Strength":10,
     "Speed":100,
     "Durability":50,
-    "Power":57,
+    "Fighting":57,
     "Combat":32,
     "CharImg":"resources/charImg/Flash_1.jpeg"
   },
@@ -297,7 +297,7 @@ var superheroData=[
     "Strength":10,
     "Speed":8,
     "Durability":70,
-    "Power":43,
+    "Fighting":43,
     "Combat":70,
     "CharImg":"resources/charImg/Black_knight_3.jpeg"
   },
@@ -312,7 +312,7 @@ var superheroData=[
     "Strength":83,
     "Speed":42,
     "Durability":100,
-    "Power":100,
+    "Fighting":100,
     "Combat":64,
     "CharImg":"resources/charImg/A-Bomb.jpeg"
   },
@@ -327,7 +327,7 @@ var superheroData=[
     "Strength":100,
     "Speed":53,
     "Durability":90,
-    "Power":64,
+    "Fighting":64,
     "Combat":64,
     "CharImg":"resources/charImg/Wonder_Man.jpeg"
   },
@@ -342,7 +342,7 @@ var superheroData=[
     "Strength":10,
     "Speed":27,
     "Durability":70,
-    "Power":74,
+    "Fighting":74,
     "Combat":56,
     "CharImg":"resources/charImg/Invisible_Woman.jpeg"
   },
@@ -357,7 +357,7 @@ var superheroData=[
     "Strength":85,
     "Speed":58,
     "Durability":85,
-    "Power":100,
+    "Fighting":100,
     "Combat":64,
     "CharImg":"resources/charImg/Iron_Man.jpeg"
   },
@@ -372,7 +372,7 @@ var superheroData=[
     "Strength":38,
     "Speed":60,
     "Durability":65,
-    "Power":46,
+    "Fighting":46,
     "Combat":75,
     "CharImg":"resources/charImg/Spider-Girl.jpeg"
   },
@@ -387,7 +387,7 @@ var superheroData=[
     "Strength":55,
     "Speed":60,
     "Durability":74,
-    "Power":58,
+    "Fighting":58,
     "Combat":85,
     "CharImg":"resources/charImg/Spider-Man.jpeg"
   },
@@ -402,7 +402,7 @@ var superheroData=[
     "Strength":10,
     "Speed":47,
     "Durability":30,
-    "Power":88,
+    "Fighting":88,
     "Combat":75,
     "CharImg":"resources/charImg/Storm.jpeg"
   },
@@ -417,7 +417,7 @@ var superheroData=[
     "Strength":57,
     "Speed":65,
     "Durability":84,
-    "Power":79,
+    "Fighting":79,
     "Combat":84,
     "CharImg":"resources/charImg/Venom.jpeg"
   },
@@ -432,7 +432,7 @@ var superheroData=[
     "Strength":16,
     "Speed":33,
     "Durability":10,
-    "Power":23,
+    "Fighting":23,
     "Combat":70,
     "CharImg":"resources/charImg/Black_Cat.jpeg"
   },
@@ -447,7 +447,7 @@ var superheroData=[
     "Strength":48,
     "Speed":27,
     "Durability":42,
-    "Power":60,
+    "Fighting":60,
     "Combat":28,
     "CharImg":"resources/charImg/Spider-Woman_3.jpeg"
   },
@@ -462,7 +462,7 @@ var superheroData=[
     "Strength":22,
     "Speed":47,
     "Durability":56,
-    "Power":40,
+    "Fighting":40,
     "Combat":56,
     "CharImg":"resources/charImg/Vulture.jpeg"
   },
@@ -477,7 +477,7 @@ var superheroData=[
     "Strength":75,
     "Speed":47,
     "Durability":97,
-    "Power":62,
+    "Fighting":62,
     "Combat":56,
     "CharImg":"resources/charImg/Sandman.jpeg"
   },
@@ -492,7 +492,7 @@ var superheroData=[
     "Strength":100,
     "Speed":47,
     "Durability":100,
-    "Power":41,
+    "Fighting":41,
     "Combat":85,
     "CharImg":"resources/charImg/Hulk.jpeg"
   },
@@ -507,7 +507,7 @@ var superheroData=[
     "Strength":10,
     "Speed":35,
     "Durability":42,
-    "Power":52,
+    "Fighting":52,
     "Combat":70,
     "CharImg":"resources/charImg/Dagger.jpeg"
   }

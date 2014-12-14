@@ -11,6 +11,10 @@ web.data.popdata = [];
 web.data.currentcountindex='undefined';
 web.data.currentindex='undefined';
 
+var markers;
+
+web.data.sliderData =  {"Durability":{"from":0,"to":100},"Fighting":{"from":0,"to":100},"Speed":{"from":0,"to":100},"Energy":{"from":0,"to":100},"Strength":{"from":0,"to":100},"Intellect":{"from":0,"to":100}};
+
 $("document").ready(function(){
     web.handlers();
     web.initialise();
@@ -60,10 +64,42 @@ web.handlers=function() {
         $('body').delegate('.point','click',web.action.showStats);
         $('body').delegate('#navright','click',web.action.showNextCharacter);
         $('body').delegate('#navleft','click',web.action.ShowPrevCharacter);
+        
+
+            $('._slider').on("change", function(){
+                var _this=$(this);
+                var _check=_this.parent().find('input[type="checkbox"]');
+                var from =_this.data("from");
+                var to=_this.data("to");
+                web.data.sliderData;
+                if(_check.is(":checked")){
+                       web.data.sliderData[_this.data('value')].from=from;
+                       web.data.sliderData[_this.data('value')].to=to;
+                }
+                console.log(web.data.sliderData);
+                web.items.formData();
+//                map.removeLayer(markers);
+            });
 
 
 }
 
+
+web.items.formData = function(){
+    var _data=web.data.superherodata;
+    var _sliderData=web.data.sliderData;
+    var powers=[ 
+        "Strength",
+        "Speed",
+        "Durability",
+        "Power",
+        "Combat",
+        "Intellect"
+    ];
+    $.each(_data,function(key,value){
+        
+    });
+}
 
 
 
@@ -75,24 +111,24 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 20,
-                to: 80,
+                from: 0,
+                to: 100,
                 grid:true
             });
 
-            $range.on("change", function () {
-                var $this = $(this),
-                    from = $this.data("from"),
-                    to = $this.data("to");
-
-               if($('._check_durability').is(":checked")) {
-                    console.log($('._check_durability').val());
-                   console.log("durability: " + from + " - " + to);
-               }
-                else{
-                   console.log("durability is unchecked");
-               }
-            });
+//            $range.on("change", function () {
+//                var $this = $(this),
+//                    from = $this.data("from"),
+//                    to = $this.data("to");
+//
+//               if($('._check_durability').is(":checked")) {
+//                    console.log($('._check_durability').val());
+//                   console.log("durability: " + from + " - " + to);
+//               }
+//                else{
+//                   console.log("durability is unchecked");
+//               }
+//            });
 
 
             var $range = $("#range1");
@@ -100,24 +136,24 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 20,
-                to: 80,
+                from: 00,
+                to: 100,
                 grid:true
             });
 
-            $range.on("change", function () {
-                var $this = $(this),
-                    from = $this.data("from"),
-                    to = $this.data("to");
-                if($('._check_fighting').is(":checked")) {
-                    console.log($('._check_fighting').val());
-                    console.log("fighting: " + from + " - " + to);
-                  }
-                  else{
-                   console.log("fighting is unchecked");
-                    }
-
-            });
+//            $range.on("change", function () {
+//                var $this = $(this),
+//                    from = $this.data("from"),
+//                    to = $this.data("to");
+//                if($('._check_fighting').is(":checked")) {
+//                    console.log($('._check_fighting').val());
+//                    console.log("fighting: " + from + " - " + to);
+//                  }
+//                  else{
+//                   console.log("fighting is unchecked");
+//                    }
+//
+//            });
 
           var $range = $("#range2");
 
@@ -125,24 +161,24 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 20,
-                to: 80,
+                from: 0,
+                to: 100,
                 grid:true
             });
 
-            $range.on("change", function () {
-                var $this = $(this),
-                    from = $this.data("from"),
-                    to = $this.data("to");
-                 if($('._check_speed').is(":checked")) {
-                    console.log($('._check_speed').val());
-                    console.log("speed: " + from + " - " + to);
-                  }
-                  else{
-                   console.log("speed is unchecked");
-                    }
-
-            });
+//            $range.on("change", function () {
+//                var $this = $(this),
+//                    from = $this.data("from"),
+//                    to = $this.data("to");
+//                 if($('._check_speed').is(":checked")) {
+//                    console.log($('._check_speed').val());
+//                    console.log("speed: " + from + " - " + to);
+//                  }
+//                  else{
+//                   console.log("speed is unchecked");
+//                    }
+//
+//            });
 
           var $range = $("#range3");
 
@@ -150,23 +186,23 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 20,
-                to: 80,
+                from: 0,
+                to: 100,
                 grid:true
             });
 
-            $range.on("change", function () {
-                var $this = $(this),
-                    from = $this.data("from"),
-                    to = $this.data("to");
-                if($('._check_energy').is(":checked")) {
-                    console.log($('._check_energy').val());
-                    console.log("energy: " + from + " - " + to);
-                  }
-                  else{
-                   console.log("energy is unchecked");
-                    }
-            });
+//            $range.on("change", function () {
+//                var $this = $(this),
+//                    from = $this.data("from"),
+//                    to = $this.data("to");
+//                if($('._check_energy').is(":checked")) {
+//                    console.log($('._check_energy').val());
+//                    console.log("energy: " + from + " - " + to);
+//                  }
+//                  else{
+//                   console.log("energy is unchecked");
+//                    }
+//            });
 
           var $range = $("#range4");
 
@@ -174,24 +210,24 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 20,
-                to: 80,
+                from: 00,
+                to: 100,
                 grid:true
             });
 
-            $range.on("change", function () {
-                var $this = $(this),
-                    from = $this.data("from"),
-                    to = $this.data("to");
-
-               if($('._check_strength').is(":checked")) {
-                    console.log($('._check_strength').val());
-                    console.log("strength: " + from + " - " + to);
-                  }
-                  else{
-                   console.log("strength is unchecked");
-                    }
-            });
+//            $range.on("change", function () {
+//                var $this = $(this),
+//                    from = $this.data("from"),
+//                    to = $this.data("to");
+//
+//               if($('._check_strength').is(":checked")) {
+//                    console.log($('._check_strength').val());
+//                    console.log("strength: " + from + " - " + to);
+//                  }
+//                  else{
+//                   console.log("strength is unchecked");
+//                    }
+//            });
 
           var $range = $("#range5");
 
@@ -199,24 +235,24 @@ web.items.sliders = function(){
                 type: "double",
                 min: 0,
                 max: 100,
-                from: 20,
-                to: 80,
+                from: 0,
+                to: 100,
                 grid:true
             });
 
-            $range.on("change", function () {
-                var $this = $(this),
-                    from = $this.data("from"),
-                    to = $this.data("to");
-
-                if($('._check_intellect').is(":checked")) {
-                    console.log($('._check_intellect').val());
-                    console.log("intellect: " + from + " - " + to);
-                  }
-                  else{
-                   console.log("intellect is unchecked");
-                    }
-            });
+//            $range.on("change", function () {
+//                var $this = $(this),
+//                    from = $this.data("from"),
+//                    to = $this.data("to");
+//
+//                if($('._check_intellect').is(":checked")) {
+//                    console.log($('._check_intellect').val());
+//                    console.log("intellect: " + from + " - " + to);
+//                  }
+//                  else{
+//                   console.log("intellect is unchecked");
+//                    }
+//            });
 
 
                /*     $("#range0").ionRangeSlider({
@@ -370,7 +406,8 @@ web.items.makeMap = function(){
                 else{
                     icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle villian-sm icon point",iconSize : L.point(size, size)});
                 }
-               L.marker([value.Lat,value.Long], {icon: icon}).addTo(map); 
+               markers= L.marker([value.Lat,value.Long], {icon: icon});
+                map.addLayer(markers);
 //                $('div[class*="hero-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
 //                $('div[class*="villian-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
 //                $('div[class*="both-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
@@ -539,8 +576,9 @@ var powers=[
     "Strength",
     "Speed",
     "Durability",
-    "Power",
-    "Combat"
+    "Fighting",
+    "Combat",
+    "Intellect"
 ];
 var data=web.data.popdata[index];
     template.find('#navright').removeClass('active').addClass(previouscount+1===web.data.popdata.length?'':'active');
@@ -551,6 +589,7 @@ var data=web.data.popdata[index];
     template.find('#charname').children('.icon').removeClass('villian-mm hero-mm').addClass(data.Alignment === 'good'? 'hero-mm': 'villian-mm');
     template.find('._alias').html(data.Name);
     template.find('._location').html(data.Location);
+    template.find('._image').attr('src',data.CharImg);
     $.each(powers, function(key,power){
         template.find('.'+power).children('.bar2').data('number',data[power]).css({"width":data[power]+"%"});
         template.find('.'+power).children('.number').html(data[power]).css({"left":data[power]+"%"});
