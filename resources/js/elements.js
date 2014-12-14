@@ -1,4 +1,7 @@
 var web = {};
+web.initialise = "" || {};
+web.handlers = "" || {};
+web.action = "" || {};
 web.data = "" || {};
 web.items= "" || {};
 
@@ -9,6 +12,8 @@ $("document").ready(function(){
 })
 
 web.initialise = function(){
+    
+web.data.superherodata=superheroData;
 web.items.makeMap();
 web.items.sliders();
 web.items.drawChart();
@@ -45,10 +50,14 @@ web.handlers=function() {
                    console.log("villain is unchecked");
                }
             });
-
+    
+    
+        $('body').delegate('.point','click',web.action.showStats);
 
 
 }
+
+
 
 
 web.items.sliders = function(){
@@ -319,7 +328,10 @@ web.items.makeMap = function(){
                     _locitems[value.State].characters=[];
                 }
                 _locitems[value.State].characters.push(value.Name);
-
+                if(typeof _locitems[value.State].ids === "undefined"){
+                    _locitems[value.State].ids="";
+                }
+                _locitems[value.State].ids=_locitems[value.State].ids+value.id+",";
 
             if(value.Alignment ==="good"){
                 _locitems[value.State].hero++;
@@ -343,13 +355,13 @@ web.items.makeMap = function(){
             $.each(_locitems,function(key,value){
                 size=value.count*2 +20;
                 if(value.hero>0 && value.villian>0){
-                    icon=L.divIcon({html:value.count,className:"circle both-sm icon point",iconSize: L.point(size, size)});
+                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle both-sm icon point",iconSize: L.point(size, size)});
                 }
                 else if(value.hero>0){
-                    icon=L.divIcon({html:value.count,className:"circle hero-sm icon point",iconSize : L.point(size, size)});
+                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle hero-sm icon point",iconSize : L.point(size, size)});
                 }
                 else{
-                    icon=L.divIcon({html:value.count,className:"circle villian-sm icon point",iconSize : L.point(size, size)});
+                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle villian-sm icon point",iconSize : L.point(size, size)});
                 }
                L.marker([value.Lat,value.Long], {icon: icon}).addTo(map); 
 //                $('div[class*="hero-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
@@ -494,6 +506,17 @@ web.items.drawChart = function(){
           selector: '.bar2',
           speed: 1000
         });
+}
+
+
+web.action.showStats = function(){
+    var _this=$(this);
+    var indexes=_this.children('div').data("items").split(",");
+    indexes.pop();
+    console.log(indexes);
+    
+    var template=$('#popparent').html();
+
 }
 
 

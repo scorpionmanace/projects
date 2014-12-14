@@ -61,7 +61,8 @@ var statesData = {"type":"FeatureCollection","features":[
 
 
 var superheroData=[
-  {
+  { 
+    "id":1,
     "Name":"A-Bomb",
     "Alignment":"bad",
     "Location":"Scarsdale, Arizona",
@@ -75,6 +76,7 @@ var superheroData=[
     "Combat":64
   },
   {
+    "id":2,  
     "Name":"Moonstone",
     "Alignment":"good",
     "Location":"Van Nuys, California",
@@ -88,6 +90,7 @@ var superheroData=[
     "Combat":80
   },
   {
+    "id":3,  
     "Name":"Jubilee",
     "Alignment":"good",
     "Location":"Beverly Hills, California",
@@ -101,6 +104,7 @@ var superheroData=[
     "Combat":90
   },
   {
+    "id":4,  
     "Name":"Machine Man",
     "Alignment":"good",
     "Location":"Central City, California",
@@ -114,6 +118,7 @@ var superheroData=[
     "Combat":64
   },
   {
+    "id":5,  
     "Name":"Mister Fantastic",
     "Alignment":"good",
     "Location":"Central City, California",
@@ -127,6 +132,7 @@ var superheroData=[
     "Combat":64
   },
   {
+    "id":6,  
     "Name":"Green Goblin",
     "Alignment":"bad",
     "Location":"Hartford, Connecticut",
@@ -140,6 +146,7 @@ var superheroData=[
     "Combat":28
   },
   {
+    "id":7,  
     "Name":"Jack of Hearts",
     "Alignment":"good",
     "Location":"New Haven, Connecticut",
@@ -153,6 +160,7 @@ var superheroData=[
     "Combat":30
   },
   {
+    "id":8,  
     "Name":"Jennifer Kale",
     "Alignment":"good",
     "Location":"Citrusville, Florida",
@@ -166,6 +174,7 @@ var superheroData=[
     "Combat":72
   },
   {
+    "id":9,  
     "Name":"Ant-Man 2",
     "Alignment":"good",
     "Location":"Coral Gables, Florida",
@@ -179,6 +188,7 @@ var superheroData=[
     "Combat":28
   },
   {
+    "id":10,  
     "Name":"Lizard",
     "Alignment":"bad",
     "Location":"Coral Gables, Florida",
@@ -192,6 +202,7 @@ var superheroData=[
     "Combat":56
   },
   {
+    "id":11,  
     "Name":"Domino",
     "Alignment":"good",
     "Location":"Everglades, Florida",
@@ -205,6 +216,7 @@ var superheroData=[
     "Combat":74
   },
   {
+    "id":12,  
     "Name":"Moon Knight",
     "Alignment":"good",
     "Location":"Chicago, Illinois",
@@ -218,6 +230,7 @@ var superheroData=[
     "Combat":75
   },
   {
+    "id":13,  
     "Name":"Battlestar",
     "Alignment":"good",
     "Location":"Chicago, Illinois",
@@ -231,6 +244,7 @@ var superheroData=[
     "Combat":74
   },
   {
+    "id":14,  
     "Name":"Hawkeye",
     "Alignment":"good",
     "Location":"Waverly, lowa",
@@ -244,6 +258,7 @@ var superheroData=[
     "Combat":80
   },
   {
+    "id":15,  
     "Name":"Flash 1",
     "Alignment":"good",
     "Location":"Hibbardsville, Kansas",
@@ -257,6 +272,7 @@ var superheroData=[
     "Combat":32
   },
   {
+    "id":16,  
     "Name":"Black Knight III",
     "Alignment":"good",
     "Location":"Gloucester, Massachusetts",
@@ -270,6 +286,7 @@ var superheroData=[
     "Combat":70
   },
   {
+    "id":17,  
     "Name":"Ultron",
     "Alignment":"bad",
     "Location":"Cresskill, New Jersey",
@@ -283,6 +300,7 @@ var superheroData=[
     "Combat":64
   },
   {
+    "id":18,  
     "Name":"Wonder Man",
     "Alignment":"good",
     "Location":"Paterson, New Jersey",
@@ -296,6 +314,7 @@ var superheroData=[
     "Combat":64
   },
   {
+    "id":19,  
     "Name":"Invisible Woman",
     "Alignment":"good",
     "Location":"Glenville, Long Island, New York",
@@ -309,6 +328,7 @@ var superheroData=[
     "Combat":56
   },
   {
+    "id":20,  
     "Name":"Iron Man",
     "Alignment":"good",
     "Location":"Long Island, New York",
@@ -322,6 +342,7 @@ var superheroData=[
     "Combat":64
   },
   {
+    "id":21,  
     "Name":"Spider-Girl",
     "Alignment":"good",
     "Location":"New York City, New York",
@@ -335,6 +356,7 @@ var superheroData=[
     "Combat":75
   },
   {
+    "id":22,  
     "Name":"Spider-Man",
     "Alignment":"good",
     "Location":"New York, New York",
@@ -348,6 +370,7 @@ var superheroData=[
     "Combat":85
   },
   {
+    "id":23,  
     "Name":"Storm",
     "Alignment":"good",
     "Location":"New York, New York",
@@ -361,6 +384,7 @@ var superheroData=[
     "Combat":75
   },
   {
+    "id":24,  
     "Name":"Venom",
     "Alignment":"bad",
     "Location":"New York, New York",
@@ -374,6 +398,7 @@ var superheroData=[
     "Combat":84
   },
   {
+    "id":25,  
     "Name":"Black Cat",
     "Alignment":"good",
     "Location":"Queens, New York",
@@ -387,6 +412,7 @@ var superheroData=[
     "Combat":70
   },
   {
+    "id":26,  
     "Name":"Spider-Woman III",
     "Alignment":"good",
     "Location":"Rochester, New York",
@@ -400,6 +426,7 @@ var superheroData=[
     "Combat":28
   },
   {
+    "id":27,  
     "Name":"Vulture",
     "Alignment":"bad",
     "Location":"Staten Island, New York City",
@@ -413,6 +440,7 @@ var superheroData=[
     "Combat":56
   },
   {
+    "id":28,  
     "Name":"Sandman",
     "Alignment":"bad",
     "Location":"Queens, New York",
@@ -426,6 +454,7 @@ var superheroData=[
     "Combat":56
   },
   {
+    "id":29,  
     "Name":"Hulk",
     "Alignment":"good",
     "Location":"Dayton, Ohio",
@@ -439,6 +468,7 @@ var superheroData=[
     "Combat":85
   },
   {
+    "id":30,  
     "Name":"Dagger",
     "Alignment":"good",
     "Location":"Shaker Heights, Ohio",
