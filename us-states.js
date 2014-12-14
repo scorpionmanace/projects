@@ -73,7 +73,7 @@ var superheroData=[
     "Speed":17,
     "Durability":80,
     "Fighting":17,
-    "Intellect":44,"Combat":64,
+    "Intellect":44,"Energy":64,
     "CharImg":"resources/charImg/A-Bomb.jpg"
   },
   {
@@ -88,7 +88,7 @@ var superheroData=[
     "Speed":47,
     "Durability":52,
     "Fighting":79,
-    "Intellect":65,"Combat":80,
+    "Intellect":65,"Energy":80,
     "CharImg":"resources/charImg/Moonstone.jpeg"
   },
   {
@@ -103,7 +103,7 @@ var superheroData=[
     "Speed":22,
     "Durability":20,
     "Fighting":66,
-    "Intellect":87,"Combat":90,
+    "Intellect":87,"Energy":90,
     "CharImg":"resources/charImg/Jubilee.jpeg"
   },
   {
@@ -118,7 +118,7 @@ var superheroData=[
     "Speed":35,
     "Durability":84,
     "Fighting":51,
-    "Intellect":30,"Combat":64,
+    "Intellect":30,"Energy":64,
     "CharImg":"resources/charImg/Machine_Man.jpeg"
   },
   {
@@ -133,7 +133,7 @@ var superheroData=[
     "Speed":18,
     "Durability":70,
     "Fighting":32,
-    "Intellect":100,"Combat":64,
+    "Intellect":100,"Energy":64,
     "CharImg":"resources/charImg/Mister_Fantastic.jpeg"
   },
   {
@@ -148,7 +148,7 @@ var superheroData=[
     "Speed":35,
     "Durability":48,
     "Fighting":38,
-    "Intellect":65,"Combat":28,
+    "Intellect":65,"Energy":28,
     "CharImg":"resources/charImg/Green_Goblin.jpeg"
   },
   {
@@ -163,7 +163,7 @@ var superheroData=[
     "Speed":100,
     "Durability":30,
     "Fighting":70,
-    "Intellect":39,"Combat":30,
+    "Intellect":39,"Energy":30,
     "CharImg":"resources/charImg/Jack_of_Hearts.jpeg"
   },
   {
@@ -178,7 +178,7 @@ var superheroData=[
     "Speed":35,
     "Durability":42,
     "Fighting":61,
-    "Intellect":67,"Combat":72,
+    "Intellect":67,"Energy":72,
     "CharImg":"resources/charImg/Jennifer_Kale.jpeg"
   },
   {
@@ -193,7 +193,7 @@ var superheroData=[
     "Speed":23,
     "Durability":28,
     "Fighting":32,
-    "Intellect":90,"Combat":28,
+    "Intellect":90,"Energy":28,
     "CharImg":"resources/charImg/Ant-Man_2.jpeg"
   },
   {
@@ -208,7 +208,7 @@ var superheroData=[
     "Speed":27,
     "Durability":70,
     "Fighting":40,
-    "Intellect":39,"Combat":56,
+    "Intellect":39,"Energy":56,
     "CharImg":"resources/charImg/Lizard.jpeg"
   },
   {
@@ -223,7 +223,7 @@ var superheroData=[
     "Speed":27,
     "Durability":28,
     "Fighting":49,
-    "Intellect":65,"Combat":74,
+    "Intellect":65,"Energy":74,
     "CharImg":"resources/charImg/Domino.jpeg"
   },
   {
@@ -238,7 +238,7 @@ var superheroData=[
     "Speed":23,
     "Durability":42,
     "Fighting":28,
-    "Intellect":34,"Combat":75,
+    "Intellect":34,"Energy":75,
     "CharImg":"resources/charImg/Moon_Knight.jpeg"
   },
   {
@@ -253,7 +253,7 @@ var superheroData=[
     "Speed":35,
     "Durability":74,
     "Fighting":48,
-    "Intellect":43,"Combat":74,
+    "Intellect":43,"Energy":74,
     "CharImg":"resources/charImg/battlestar.jpeg"
   },
   {
@@ -268,7 +268,7 @@ var superheroData=[
     "Speed":23,
     "Durability":14,
     "Fighting":26,
-    "Intellect":65,"Combat":80,
+    "Intellect":65,"Energy":80,
     "CharImg":"resources/charImg/Hawkeye.jpeg"
   },
   {
@@ -283,7 +283,7 @@ var superheroData=[
     "Speed":100,
     "Durability":50,
     "Fighting":57,
-    "Intellect":45,"Combat":32,
+    "Intellect":45,"Energy":32,
     "CharImg":"resources/charImg/Flash_1.jpeg"
   },
   {
@@ -298,7 +298,7 @@ var superheroData=[
     "Speed":8,
     "Durability":70,
     "Fighting":43,
-    "Intellect":76,"Combat":70,
+    "Intellect":76,"Energy":70,
     "CharImg":"resources/charImg/Black_knight_3.jpeg"
   },
   {
@@ -313,7 +313,7 @@ var superheroData=[
     "Speed":42,
     "Durability":100,
     "Fighting":100,
-    "Intellect":65,"Combat":64,
+    "Intellect":65,"Energy":64,
     "CharImg":"resources/charImg/A-Bomb.jpeg"
   },
   {
@@ -328,7 +328,7 @@ var superheroData=[
     "Speed":53,
     "Durability":90,
     "Fighting":64,
-    "Intellect":55,"Combat":64,
+    "Intellect":55,"Energy":64,
     "CharImg":"resources/charImg/Wonder_Man.jpeg"
   },
   {
@@ -343,7 +343,7 @@ var superheroData=[
     "Speed":27,
     "Durability":70,
     "Fighting":74,
-    "Intellect":45,"Combat":56,
+    "Intellect":45,"Energy":56,
     "CharImg":"resources/charImg/Invisible_Woman.jpeg"
   },
   {
@@ -358,7 +358,7 @@ var superheroData=[
     "Speed":58,
     "Durability":85,
     "Fighting":100,
-    "Intellect":65,"Combat":64,
+    "Intellect":65,"Energy":64,
     "CharImg":"resources/charImg/Iron_Man.jpeg"
   },
   {
@@ -373,7 +373,7 @@ var superheroData=[
     "Speed":60,
     "Durability":65,
     "Fighting":46,
-    "Intellect":68,"Combat":75,
+    "Intellect":68,"Energy":75,
     "CharImg":"resources/charImg/Spider-Girl.jpeg"
   },
   {
@@ -388,7 +388,7 @@ var superheroData=[
     "Speed":60,
     "Durability":74,
     "Fighting":58,
-    "Intellect":88,"Combat":85,
+    "Intellect":88,"Energy":85,
     "CharImg":"resources/charImg/Spider-Man.jpeg"
   },
   {
@@ -403,7 +403,7 @@ var superheroData=[
     "Speed":47,
     "Durability":30,
     "Fighting":88,
-    "Intellect":76,"Combat":75,
+    "Intellect":76,"Energy":75,
     "CharImg":"resources/charImg/Storm.jpeg"
   },
   {
@@ -418,7 +418,7 @@ var superheroData=[
     "Speed":65,
     "Durability":84,
     "Fighting":79,
-    "Intellect":35,"Combat":84,
+    "Intellect":35,"Energy":84,
     "CharImg":"resources/charImg/Venom.jpeg"
   },
   {
@@ -433,7 +433,7 @@ var superheroData=[
     "Speed":33,
     "Durability":10,
     "Fighting":23,
-    "Intellect":42,"Combat":70,
+    "Intellect":42,"Energy":70,
     "CharImg":"resources/charImg/Black_Cat.jpeg"
   },
   {
@@ -448,7 +448,7 @@ var superheroData=[
     "Speed":27,
     "Durability":42,
     "Fighting":60,
-    "Intellect":68,"Combat":28,
+    "Intellect":68,"Energy":28,
     "CharImg":"resources/charImg/Spider-Woman_3.jpeg"
   },
   {
@@ -463,7 +463,7 @@ var superheroData=[
     "Speed":47,
     "Durability":56,
     "Fighting":40,
-    "Intellect":40,"Combat":56,
+    "Intellect":40,"Energy":56,
     "CharImg":"resources/charImg/Vulture.jpeg"
   },
   {
@@ -478,7 +478,7 @@ var superheroData=[
     "Speed":47,
     "Durability":97,
     "Fighting":62,
-    "Intellect":80,"Combat":56,
+    "Intellect":80,"Energy":56,
     "CharImg":"resources/charImg/Sandman.jpeg"
   },
   {
@@ -493,7 +493,7 @@ var superheroData=[
     "Speed":47,
     "Durability":100,
     "Fighting":41,
-    "Intellect":45,"Combat":85,
+    "Intellect":45,"Energy":85,
     "CharImg":"resources/charImg/Hulk.jpeg"
   },
   {
@@ -508,7 +508,7 @@ var superheroData=[
     "Speed":35,
     "Durability":42,
     "Fighting":52,
-    "Combat":70,
+    "Energy":70,
     "Intellect":65,
     "CharImg":"resources/charImg/Dagger.jpeg"
   }
@@ -568,3 +568,6 @@ var loc_items={
         "hero":0,
         "villian":0}
 };
+
+
+

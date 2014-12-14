@@ -9,7 +9,7 @@
     "Speed":17,
     "Durability":80,
     "Power":17,
-    "Combat":64
+    "Energy":64
   },
   {
     "Name":"Moonstone",
@@ -21,7 +21,7 @@
     "Speed":47,
     "Durability":52,
     "Power":79,
-    "Combat":80
+    "Energy":80
   },
   {
     "Name":"Jubilee",
@@ -33,7 +33,7 @@
     "Speed":22,
     "Durability":20,
     "Power":66,
-    "Combat":90
+    "Energy":90
   },
   {
     "Name":"Machine Man",
@@ -45,7 +45,7 @@
     "Speed":35,
     "Durability":84,
     "Power":51,
-    "Combat":64
+    "Energy":64
   },
   {
     "Name":"Mister Fantastic",
@@ -57,7 +57,7 @@
     "Speed":18,
     "Durability":70,
     "Power":32,
-    "Combat":64
+    "Energy":64
   },
   {
     "Name":"Green Goblin",
@@ -69,7 +69,7 @@
     "Speed":35,
     "Durability":48,
     "Power":38,
-    "Combat":28
+    "Energy":28
   },
   {
     "Name":"Jack of Hearts",
@@ -81,7 +81,7 @@
     "Speed":100,
     "Durability":30,
     "Power":70,
-    "Combat":30
+    "Energy":30
   },
   {
     "Name":"Jennifer Kale",
@@ -93,7 +93,7 @@
     "Speed":35,
     "Durability":42,
     "Power":61,
-    "Combat":72
+    "Energy":72
   },
   {
     "Name":"Ant-Man 2",
@@ -105,7 +105,7 @@
     "Speed":23,
     "Durability":28,
     "Power":32,
-    "Combat":28
+    "Energy":28
   },
   {
     "Name":"Lizard",
@@ -117,7 +117,7 @@
     "Speed":27,
     "Durability":70,
     "Power":40,
-    "Combat":56
+    "Energy":56
   },
   {
     "Name":"Domino",
@@ -129,7 +129,7 @@
     "Speed":27,
     "Durability":28,
     "Power":49,
-    "Combat":74
+    "Energy":74
   },
   {
     "Name":"Moon Knight",
@@ -141,7 +141,7 @@
     "Speed":23,
     "Durability":42,
     "Power":28,
-    "Combat":75
+    "Energy":75
   },
   {
     "Name":"Battlestar",
@@ -153,7 +153,7 @@
     "Speed":35,
     "Durability":74,
     "Power":48,
-    "Combat":74
+    "Energy":74
   },
   {
     "Name":"Hawkeye",
@@ -165,7 +165,7 @@
     "Speed":23,
     "Durability":14,
     "Power":26,
-    "Combat":80
+    "Energy":80
   },
   {
     "Name":"Flash 1",
@@ -177,7 +177,7 @@
     "Speed":100,
     "Durability":50,
     "Power":57,
-    "Combat":32
+    "Energy":32
   },
   {
     "Name":"Black Knight III",
@@ -189,7 +189,7 @@
     "Speed":8,
     "Durability":70,
     "Power":43,
-    "Combat":70
+    "Energy":70
   },
   {
     "Name":"Ultron",
@@ -201,7 +201,7 @@
     "Speed":42,
     "Durability":100,
     "Power":100,
-    "Combat":64
+    "Energy":64
   },
   {
     "Name":"Wonder Man",
@@ -213,7 +213,7 @@
     "Speed":53,
     "Durability":90,
     "Power":64,
-    "Combat":64
+    "Energy":64
   },
   {
     "Name":"Invisible Woman",
@@ -225,7 +225,7 @@
     "Speed":27,
     "Durability":70,
     "Power":74,
-    "Combat":56
+    "Energy":56
   },
   {
     "Name":"Iron Man",
@@ -237,7 +237,7 @@
     "Speed":58,
     "Durability":85,
     "Power":100,
-    "Combat":64
+    "Energy":64
   },
   {
     "Name":"Spider-Girl",
@@ -249,7 +249,7 @@
     "Speed":60,
     "Durability":65,
     "Power":46,
-    "Combat":75
+    "Energy":75
   },
   {
     "Name":"Spider-Man",
@@ -261,7 +261,7 @@
     "Speed":60,
     "Durability":74,
     "Power":58,
-    "Combat":85
+    "Energy":85
   },
   {
     "Name":"Storm",
@@ -273,7 +273,7 @@
     "Speed":47,
     "Durability":30,
     "Power":88,
-    "Combat":75
+    "Energy":75
   },
   {
     "Name":"Venom",
@@ -285,7 +285,7 @@
     "Speed":65,
     "Durability":84,
     "Power":79,
-    "Combat":84
+    "Energy":84
   },
   {
     "Name":"Black Cat",
@@ -297,7 +297,7 @@
     "Speed":33,
     "Durability":10,
     "Power":23,
-    "Combat":70
+    "Energy":70
   },
   {
     "Name":"Spider-Woman III",
@@ -309,7 +309,7 @@
     "Speed":27,
     "Durability":42,
     "Power":60,
-    "Combat":28
+    "Energy":28
   },
   {
     "Name":"Vulture",
@@ -321,7 +321,7 @@
     "Speed":47,
     "Durability":56,
     "Power":40,
-    "Combat":56
+    "Energy":56
   },
   {
     "Name":"Sandman",
@@ -333,7 +333,7 @@
     "Speed":47,
     "Durability":97,
     "Power":62,
-    "Combat":56
+    "Energy":56
   },
   {
     "Name":"Hulk",
@@ -345,7 +345,7 @@
     "Speed":47,
     "Durability":100,
     "Power":41,
-    "Combat":85
+    "Energy":85
   },
   {
     "Name":"Dagger",
@@ -357,6 +357,6 @@
     "Speed":35,
     "Durability":42,
     "Power":52,
-    "Combat":70
+    "Energy":70
   }
 ]

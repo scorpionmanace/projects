@@ -11,6 +11,8 @@ web.data.popdata = [];
 web.data.currentcountindex='undefined';
 web.data.currentindex='undefined';
 
+var map
+
 var markers;
 
 web.data.sliderData =  {"Durability":{"from":0,"to":100},"Fighting":{"from":0,"to":100},"Speed":{"from":0,"to":100},"Energy":{"from":0,"to":100},"Strength":{"from":0,"to":100},"Intellect":{"from":0,"to":100}};
@@ -30,35 +32,35 @@ web.items.drawChart();
 }
 
 web.handlers=function() {
-             var $aaa = $("#heroChar");
-
-
-            $aaa.on("change", function () {
-                var $this = $(this);
-
-               if($('._check_hero').is(":checked")) {
-                    console.log($('._check_hero').val());
-
-               }
-                else{
-                   console.log("hero is unchecked");
-               }
-            });
-
-      var $bbb = $("#villainChar");
-
-
-            $bbb.on("change", function () {
-                var $this = $(this);
-
-               if($('._check_villain').is(":checked")) {
-                    console.log($('._check_villain').val());
-
-               }
-                else{
-                   console.log("villain is unchecked");
-               }
-            });
+//             var $aaa = $("#heroChar");
+//
+//
+//            $aaa.on("change", function () {
+//                var $this = $(this);
+//
+//               if($('._check_hero').is(":checked")) {
+//                    console.log($('._check_hero').val());
+//
+//               }
+//                else{
+//                   console.log("hero is unchecked");
+//               }
+//            });
+//
+//      var $bbb = $("#villainChar");
+//
+//
+//            $bbb.on("change", function () {
+//                var $this = $(this);
+//
+//               if($('._check_villain').is(":checked")) {
+//                    console.log($('._check_villain').val());
+//
+//               }
+//                else{
+//                   console.log("villain is unchecked");
+//               }
+//            });
     
     
         $('body').delegate('.point','click',web.action.showStats);
@@ -75,9 +77,10 @@ web.handlers=function() {
                 if(_check.is(":checked")){
                        web.data.sliderData[_this.data('value')].from=from;
                        web.data.sliderData[_this.data('value')].to=to;
+                        web.items.formData();
                 }
                 console.log(web.data.sliderData);
-                web.items.formData();
+                
 //                map.removeLayer(markers);
             });
 
@@ -85,279 +88,79 @@ web.handlers=function() {
 }
 
 
-web.items.formData = function(){
-    var _data=web.data.superherodata;
-    var _sliderData=web.data.sliderData;
-    var _newData = loc_items;
-    var powervalue;
-    
-    var check=0;
-    var type="";
-    var powers=[ 
-        "Strength",
-        "Speed",
-        "Durability",
-        "Fighting",
-        "Combat",
-        "Intellect"
-    ];
-    $.each(_data,function(key,value){
-        $.each(powers,function(powerkey,power){
-            powervalue=parseInt(value[power]);
-            if(powervalue<=_sliderData[power].to && powervalue>=_sliderData[power].from){
-                
-            }
-        });
-    });
+web.items.sliders = function(){
+
+        var range=["range0","range1","range2","range3","range4","range5"];
+        $.each(range,function(key,value){
+            $("#"+value).ionRangeSlider({
+                type: "double",
+                min: 0,
+                max: 100,
+                from: 0,
+                to: 100,
+                grid:true
+            })
+        })
 }
 
 
-
-web.items.sliders = function(){
-
-          var $range = $("#range0");
-
-            $range.ionRangeSlider({
-                type: "double",
-                min: 0,
-                max: 100,
-                from: 0,
-                to: 100,
-                grid:true
-            });
-
-//            $range.on("change", function () {
-//                var $this = $(this),
-//                    from = $this.data("from"),
-//                    to = $this.data("to");
-//
-//               if($('._check_durability').is(":checked")) {
-//                    console.log($('._check_durability').val());
-//                   console.log("durability: " + from + " - " + to);
-//               }
-//                else{
-//                   console.log("durability is unchecked");
-//               }
-//            });
-
-
-            var $range = $("#range1");
-            $range.ionRangeSlider({
-                type: "double",
-                min: 0,
-                max: 100,
-                from: 00,
-                to: 100,
-                grid:true
-            });
-
-//            $range.on("change", function () {
-//                var $this = $(this),
-//                    from = $this.data("from"),
-//                    to = $this.data("to");
-//                if($('._check_fighting').is(":checked")) {
-//                    console.log($('._check_fighting').val());
-//                    console.log("fighting: " + from + " - " + to);
-//                  }
-//                  else{
-//                   console.log("fighting is unchecked");
-//                    }
-//
-//            });
-
-          var $range = $("#range2");
-
-            $range.ionRangeSlider({
-                type: "double",
-                min: 0,
-                max: 100,
-                from: 0,
-                to: 100,
-                grid:true
-            });
-
-//            $range.on("change", function () {
-//                var $this = $(this),
-//                    from = $this.data("from"),
-//                    to = $this.data("to");
-//                 if($('._check_speed').is(":checked")) {
-//                    console.log($('._check_speed').val());
-//                    console.log("speed: " + from + " - " + to);
-//                  }
-//                  else{
-//                   console.log("speed is unchecked");
-//                    }
-//
-//            });
-
-          var $range = $("#range3");
-
-            $range.ionRangeSlider({
-                type: "double",
-                min: 0,
-                max: 100,
-                from: 0,
-                to: 100,
-                grid:true
-            });
-
-//            $range.on("change", function () {
-//                var $this = $(this),
-//                    from = $this.data("from"),
-//                    to = $this.data("to");
-//                if($('._check_energy').is(":checked")) {
-//                    console.log($('._check_energy').val());
-//                    console.log("energy: " + from + " - " + to);
-//                  }
-//                  else{
-//                   console.log("energy is unchecked");
-//                    }
-//            });
-
-          var $range = $("#range4");
-
-            $range.ionRangeSlider({
-                type: "double",
-                min: 0,
-                max: 100,
-                from: 00,
-                to: 100,
-                grid:true
-            });
-
-//            $range.on("change", function () {
-//                var $this = $(this),
-//                    from = $this.data("from"),
-//                    to = $this.data("to");
-//
-//               if($('._check_strength').is(":checked")) {
-//                    console.log($('._check_strength').val());
-//                    console.log("strength: " + from + " - " + to);
-//                  }
-//                  else{
-//                   console.log("strength is unchecked");
-//                    }
-//            });
-
-          var $range = $("#range5");
-
-            $range.ionRangeSlider({
-                type: "double",
-                min: 0,
-                max: 100,
-                from: 0,
-                to: 100,
-                grid:true
-            });
-
-//            $range.on("change", function () {
-//                var $this = $(this),
-//                    from = $this.data("from"),
-//                    to = $this.data("to");
-//
-//                if($('._check_intellect').is(":checked")) {
-//                    console.log($('._check_intellect').val());
-//                    console.log("intellect: " + from + " - " + to);
-//                  }
-//                  else{
-//                   console.log("intellect is unchecked");
-//                    }
-//            });
-
-
-               /*     $("#range0").ionRangeSlider({
-                        hide_min_max: true,
-                        keyboard: true,
-                        min: 0,
-                        max: 100,
-                        from: 0,
-                        to: 100,
-                        type: 'double',
-                        step: 1,
-                        prefix: "",
-                        grid: true
-                    });
-
-                });
-                $(function () {
-                    $("#range1").ionRangeSlider({
-                        hide_min_max: true,
-                        keyboard: true,
-                        min: 0,
-                        max: 100,
-                        from: 0,
-                        to: 100,
-                        type: 'double',
-                        step: 1,
-                        prefix: "",
-                        grid: true
-                    });
-
-                });
-                  $(function () {
-                    $("#range2").ionRangeSlider({
-                        hide_min_max: true,
-                        keyboard: true,
-                        min: 0,
-                        max: 100,
-                        from: 0,
-                        to: 100,
-                        type: 'double',
-                        step: 1,
-                        prefix: "",
-                        grid: true
-                    });
-
-                });
-                  $(function () {
-                    $("#range3").ionRangeSlider({
-                        hide_min_max: true,
-                        keyboard: true,
-                        min: 0,
-                        max: 100,
-                        from: 0,
-                        to: 100,
-                        type: 'double',
-                        step: 1,
-                        prefix: "",
-                        grid: true
-                    });
-
-                });
-                  $(function () {
-                    $("#range4").ionRangeSlider({
-                        hide_min_max: true,
-                        keyboard: true,
-                        min: 0,
-                        max: 100,
-                        from: 0,
-                        to: 100,
-                        type: 'double',
-                        step: 1,
-                        prefix: "",
-                        grid: true
-                    });
-
-                });
-                  $(function () {
-                    $("#range5").ionRangeSlider({
-                        hide_min_max: true,
-                        keyboard: true,
-                        min: 0,
-                        max: 100,
-                        from: 0,
-                        to: 100,
-                        type: 'double',
-                        step: 1,
-                        prefix: "",
-                        grid: true
-                    });*/
-
+web.items.formData = function(){
+    var _data=web.data.superherodata;
+    var _sliderData=web.data.sliderData;
+    var _newData = {    "NY":{"count":0,"hero":0,"villian":0},"OH":{"count":0,"hero":0,"villian":0},"CA":{"count":0,"hero":0,"villian":0},"AZ":{"count":0,"hero":0,"villian":0},"NJ":{"count":0,"hero":0,"villian":0},"KS":{"count":0,"hero":0,"villian":0},"MA":{"count":0,"hero":0,"villian":0},"IA":{"count":0,"hero":0,"villian":0},"IL":{"count":0,"hero":0,"villian":0},"FL":{"count":0,"hero":0,"villian":0},"CT":{"count":0,"hero":0,"villian":0}};
+    
+    var powervalue;
+    
+    var check=1;
+    var type="";
+    var powers={ 
+        "Strength" :1,
+        "Speed":1,
+        "Durability":1,
+        "Fighting":1,
+        "Energy":1,
+        "Intellect":1
+    };
+    $.each(_data,function(key,value){
+        $.each(powers,function(powerkey,power){
+            powervalue=parseInt(value[powerkey]);
+            if(powervalue<=_sliderData[powerkey].to && powervalue>=_sliderData[powerkey].from){
+                power=1;
+            }
+            else{
+                power=0;
+            }
+        });
+        
+        $.each(powers,function(powerkey,power){
+            if(power===0){
+                check=0;
+            }
+        });
+        
+        if(check===1){
+            _newData[value.State].count++;
+            _newData[value.State].Lat=value.Lat;
+            _newData[value.State].Long=value.Long;
+            if(value.Alignment==="good"){
+                _newData[value.State].hero++;
+            }   else{
+                _newData[value.State].villian++;
+            } 
+            if(typeof _newData[value.State].ids === 'undefined'){
+                _newData[value.State].ids = "";
+            }
+            _newData[value.State].ids+= value.id +',';
+            
+        }
+    });
+    web.data.info=_newData;
+    web.items.redrawMap();
 }
 
 
 web.items.makeMap = function(){
-    var map = L.map('map').setView([38.8, -70],4);
+    map = L.map('map').setView([38.8, -70],4);
 
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			maxZoom: 4,
@@ -370,7 +173,6 @@ web.items.makeMap = function(){
     
         $(function(){
             var icon;
-//            var _characters = [];
             var _locitems=loc_items;
             $.each(superheroData,function(key,value){
                 console.log(key + " " + value);
@@ -418,26 +220,8 @@ web.items.makeMap = function(){
                 }
                markers= L.marker([value.Lat,value.Long], {icon: icon});
                 map.addLayer(markers);
-//                $('div[class*="hero-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
-//                $('div[class*="villian-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
-//                $('div[class*="both-"]').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
-//                $('.point.icon').css({"width":value.count*5+" !important","height":value.count*5+ "!important"});
             });
             });
-//            L.circle([33.7712,-111.3877], 100, {
-//                color: 'red',
-//                fillColor: 'red',
-//                fillOpacity: 1.0,
-//                content: "9"
-//            }).bindPopup("karan").addTo(map);
-//        L.marker([33.7712,-111.3877]).bindPopup($("#popparent").html()).addTo(map);
-//        var style={};
-//            style.margin_top=$('.leaflet-marker-pane').children('img').css("marginTop");
-//            style.margin_left=$('.leaflet-marker-pane').children('img').css("margin-left");
-//            style.transform_point=$('.leaflet-marker-pane').children('img').css("transform");
-//        $('.leaflet-marker-pane').html("<div class='circle hero-sm icon point'>1</div>");
-//        $('.leaflet-marker-pane').children('.point').css({"margin-top":style.margin_top,"margin-left":style.margin_left,"transform":style.transform_point});
-		// control that shows state info on hover
 		var info = L.control();
 
 		info.onAdd = function (map) {
@@ -451,9 +235,6 @@ web.items.makeMap = function(){
             $("#popparent").find("._location").html(props.name);
             }
             this._div.innerHTML = $("#popparent").html();
-//			this._div.innerHTML = '<h4>US Superhero Density</h4>' +  (props ?
-//				'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-//				: 'Hover over a points');
 		};
 
 		info.addTo(map);
@@ -562,6 +343,28 @@ web.items.drawChart = function(){
         });
 }
 
+web.items.redrawMap =function(){
+
+            var size;
+            var _locitems=web.data.info;
+//            map.removeLayer(markers);
+            $.each(_locitems,function(key,value){
+                size=value.count*2 +20;
+                if(value.hero>0 && value.villian>0){
+                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle both-sm icon point",iconSize: L.point(size, size)});
+                }
+                else if(value.hero>0){
+                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle hero-sm icon point",iconSize : L.point(size, size)});
+                }
+                else{
+                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle villian-sm icon point",iconSize : L.point(size, size)});
+                }
+               markers= L.marker([value.Lat,value.Long], {icon: icon});
+                map.addLayer(markers);
+            });
+}
+    
+
 
 web.action.showStats = function(){
     var _this=$(this);
@@ -587,7 +390,7 @@ var powers=[
     "Speed",
     "Durability",
     "Fighting",
-    "Combat",
+    "Energy",
     "Intellect"
 ];
 var data=web.data.popdata[index];
@@ -631,46 +434,3 @@ web.action.showNextCharacter = function(){
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-//function css(a) {
-//    var sheets = document.styleSheets, o = {};
-//    for (var i in sheets) {
-//        var rules = sheets[i].rules || sheets[i].cssRules;
-//        for (var r in rules) {
-//            if (a.is(rules[r].selectorText)) {
-//                o = $.extend(o, css2json(rules[r].style), css2json(a.attr('style')));
-//            }
-//        }
-//    }
-//    return o;
-//}
-
-//function css2json(css) {
-//    var s = {};
-//    if (!css) return s;
-//    if (css instanceof CSSStyleDeclaration) {
-//        for (var i in css) {
-//            if ((css[i]).toLowerCase) {
-//                s[(css[i]).toLowerCase()] = (css[css[i]]);
-//            }
-//        }
-//    } else if (typeof css == "string") {
-//        css = css.split("; ");
-//        for (var i in css) {
-//            var l = css[i].split(": ");
-//            s[l[0].toLowerCase()] = (l[1]);
-//        }
-//    }
-//    return s;
-//}
