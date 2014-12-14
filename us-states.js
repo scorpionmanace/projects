@@ -314,7 +314,7 @@ var superheroData=[
     "Durability":100,
     "Fighting":100,
     "Intellect":65,"Energy":64,
-    "CharImg":"resources/charImg/A-Bomb.jpeg"
+    "CharImg":"resources/charImg/Ultron.jpeg"
   },
   {
     "id":18,  

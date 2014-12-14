@@ -13,7 +13,7 @@ web.data.currentindex='undefined';
 
 var map
 
-var markers;
+var markers = new L.LayerGroup();
 
 web.data.sliderData =  {"Durability":{"from":0,"to":100},"Fighting":{"from":0,"to":100},"Speed":{"from":0,"to":100},"Energy":{"from":0,"to":100},"Strength":{"from":0,"to":100},"Intellect":{"from":0,"to":100}};
 
@@ -66,23 +66,38 @@ web.handlers=function() {
         $('body').delegate('.point','click',web.action.showStats);
         $('body').delegate('#navright','click',web.action.showNextCharacter);
         $('body').delegate('#navleft','click',web.action.ShowPrevCharacter);
-        
-
-            $('._slider').on("change", function(){
-                var _this=$(this);
-                var _check=_this.parent().find('input[type="checkbox"]');
-                var from =_this.data("from");
-                var to=_this.data("to");
-                web.data.sliderData;
-                if(_check.is(":checked")){
-                       web.data.sliderData[_this.data('value')].from=from;
-                       web.data.sliderData[_this.data('value')].to=to;
-                        web.items.formData();
-                }
-                console.log(web.data.sliderData);
-                
-//                map.removeLayer(markers);
+        $('body').delegate('button[type=reset]','click',function(){
+            var range=["range0","range1","range2","range3","range4","range5"];
+            var slider;
+            $.each(range,function(key,value){
+            slider= $("#"+value).data("ionRangeSlider");
+            slider.reset();
             });
+        });
+    
+        
+        
+//       var slider= $("._slider").data("ionRangeSlider");
+//        slider.onFinish({
+//                change:function(){
+//                var _this=$(this);
+//                var _check=_this.parent().find('input[type="checkbox"]');
+//                var from =_this.data("from");
+//                var to=_this.data("to");
+//                web.data.sliderData;
+//                if(_check.is(":checked")){
+//                       web.data.sliderData[_this.data('value')].from=from;
+//                       web.data.sliderData[_this.data('value')].to=to;
+//                        web.items.formData();
+//                }
+//                console.log(web.data.sliderData);
+//            }
+//        });
+//            $('._slider').on("Finish", function(){
+//                
+//                
+////                map.removeLayer(markers);
+//            });
 
 
 }
@@ -98,10 +113,37 @@ web.items.sliders = function(){
                 max: 100,
                 from: 0,
                 to: 100,
-                grid:true
-            })
-        })
-}
+                grid:true,
+                
+                onChange: function(data){
+                    console.log(data);
+                    var _this=$("#"+value);
+                    var _check=_this.parent().find('input[type="checkbox"]');
+                    var from =data.from;
+                    var to=data.to;
+                    web.data.sliderData;
+                    if(_check.is(":checked")){
+                    web.data.sliderData[_this.data('power')].from=from;
+                       web.data.sliderData[_this.data('power')].to=to;
+                        web.items.formData();
+                    }
+                },
+                onUpdate: function(data){
+                    var _this=$("#"+value);
+                    var _check=_this.parent().find('input[type="checkbox"]');
+                    var from =data.from;
+                    var to=data.to;
+                    web.data.sliderData;
+                    if(_check.is(":checked")){
+                    web.data.sliderData[_this.data('power')].from=from;
+                       web.data.sliderData[_this.data('power')].to=to;
+                        web.items.formData();
+                    }
+                }
+                });
+            });
+    }
+
 
 
 web.items.formData = function(){
@@ -114,21 +156,27 @@ web.items.formData = function(){
     var check=1;
     var type="";
     var powers={ 
-        "Strength" :1,
-        "Speed":1,
-        "Durability":1,
-        "Fighting":1,
-        "Energy":1,
-        "Intellect":1
+        "Strength" :0,
+        "Speed":0,
+        "Durability":0,
+        "Fighting":0,
+        "Energy":0,
+        "Intellect":0
     };
+    
+    var isHero=$("#heroChar").is(":checked");
+    var isVillian=$("#villianChar").is(":checked");
+    var isBoth = (isHero && isVillian) || (!isHero && !isVillian);
+    
     $.each(_data,function(key,value){
+        check=1;
         $.each(powers,function(powerkey,power){
             powervalue=parseInt(value[powerkey]);
             if(powervalue<=_sliderData[powerkey].to && powervalue>=_sliderData[powerkey].from){
-                power=1;
+                powers[powerkey]=1;
             }
             else{
-                power=0;
+                powers[powerkey]=0;
             }
         });
         
@@ -139,21 +187,37 @@ web.items.formData = function(){
         });
         
         if(check===1){
-            _newData[value.State].count++;
             _newData[value.State].Lat=value.Lat;
             _newData[value.State].Long=value.Long;
-            if(value.Alignment==="good"){
-                _newData[value.State].hero++;
-            }   else{
-                _newData[value.State].villian++;
-            } 
-            if(typeof _newData[value.State].ids === 'undefined'){
+             if(typeof _newData[value.State].ids === 'undefined'){
                 _newData[value.State].ids = "";
             }
-            _newData[value.State].ids+= value.id +',';
-            
+            if(isBoth){
+                _newData[value.State].count++;
+                _newData[value.State].ids+= value.id +',';
+                if(value.Alignment==="good"){
+                _newData[value.State].hero++;
+                }   else if(value.Alignment==="bad" ){
+                _newData[value.State].villian++;
+                } 
+            }
+            else if(isHero){
+                if(value.Alignment==="good"){
+                    _newData[value.State].count++;
+                    _newData[value.State].hero++;
+                    _newData[value.State].ids+= value.id +',';
+                }
+            }
+            else if(isVillian){
+                if(value.Alignment==="bad"){
+                _newData[value.State].count++;
+                _newData[value.State].villian++;
+                _newData[value.State].ids+= value.id +',';
+                }
+            }   
         }
     });
+    web.data.info={};
     web.data.info=_newData;
     web.items.redrawMap();
 }
@@ -218,8 +282,10 @@ web.items.makeMap = function(){
                 else{
                     icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle villian-sm icon point",iconSize : L.point(size, size)});
                 }
-               markers= L.marker([value.Lat,value.Long], {icon: icon});
-                map.addLayer(markers);
+               var marker= L.marker([value.Lat,value.Long], {icon: icon});
+                markers.addLayer(marker);
+                markers.addTo(map);
+                
             });
             });
 		var info = L.control();
@@ -347,21 +413,34 @@ web.items.redrawMap =function(){
 
             var size;
             var _locitems=web.data.info;
-//            map.removeLayer(markers);
+            var marker
+            
+            
+            markers.clearLayers();
             $.each(_locitems,function(key,value){
-                size=value.count*2 +20;
-                if(value.hero>0 && value.villian>0){
-                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle both-sm icon point",iconSize: L.point(size, size)});
+                if(typeof value.Lat != 'undefined' && value.count>0){
+                    size=value.count*2 +20;
+                    if(value.hero>0 && value.villian>0){
+                        icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle both-sm icon point",iconSize: L.point(size, size)});
+                    }
+                    else if(value.hero>0){
+                        icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle hero-sm icon point",iconSize : L.point(size, size)});
+                    }
+                    else{
+                        icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle villian-sm icon point",iconSize : L.point(size, size)});
+                    }
+                    marker= L.marker([value.Lat,value.Long], {icon: icon});
+                    markers.addLayer(marker);
                 }
-                else if(value.hero>0){
-                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle hero-sm icon point",iconSize : L.point(size, size)});
-                }
-                else{
-                    icon=L.divIcon({html:"<div data-items='"+value.ids+"'>"+value.count+"</div>",className:"circle villian-sm icon point",iconSize : L.point(size, size)});
-                }
-               markers= L.marker([value.Lat,value.Long], {icon: icon});
-                map.addLayer(markers);
+//                map.addLayer(markers).addTo(map);
+
+
+               
+               
+
             });
+                
+                markers.addTo(map);
 }
     
 
