@@ -88,16 +88,26 @@ web.handlers=function() {
 web.items.formData = function(){
     var _data=web.data.superherodata;
     var _sliderData=web.data.sliderData;
+    var _newData = loc_items;
+    var powervalue;
+    
+    var check=0;
+    var type="";
     var powers=[ 
         "Strength",
         "Speed",
         "Durability",
-        "Power",
+        "Fighting",
         "Combat",
         "Intellect"
     ];
     $.each(_data,function(key,value){
-        
+        $.each(powers,function(powerkey,power){
+            powervalue=parseInt(value[power]);
+            if(powervalue<=_sliderData[power].to && powervalue>=_sliderData[power].from){
+                
+            }
+        });
     });
 }
 
