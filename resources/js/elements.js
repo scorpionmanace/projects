@@ -32,38 +32,9 @@ web.items.drawChart();
 }
 
 web.handlers=function() {
-//             var $aaa = $("#heroChar");
-//
-//
-//            $aaa.on("change", function () {
-//                var $this = $(this);
-//
-//               if($('._check_hero').is(":checked")) {
-//                    console.log($('._check_hero').val());
-//
-//               }
-//                else{
-//                   console.log("hero is unchecked");
-//               }
-//            });
-//
-//      var $bbb = $("#villainChar");
-//
-//
-//            $bbb.on("change", function () {
-//                var $this = $(this);
-//
-//               if($('._check_villain').is(":checked")) {
-//                    console.log($('._check_villain').val());
-//
-//               }
-//                else{
-//                   console.log("villain is unchecked");
-//               }
-//            });
-    
     
         $('body').delegate('.point','click',web.action.showStats);
+        $('.point').hover(web.action.showStats,web.action.showStats);
         $('body').delegate('#navright','click',web.action.showNextCharacter);
         $('body').delegate('#navleft','click',web.action.ShowPrevCharacter);
         $('body').delegate('button[type=reset]','click',function(){
@@ -74,31 +45,6 @@ web.handlers=function() {
             slider.reset();
             });
         });
-    
-        
-        
-//       var slider= $("._slider").data("ionRangeSlider");
-//        slider.onFinish({
-//                change:function(){
-//                var _this=$(this);
-//                var _check=_this.parent().find('input[type="checkbox"]');
-//                var from =_this.data("from");
-//                var to=_this.data("to");
-//                web.data.sliderData;
-//                if(_check.is(":checked")){
-//                       web.data.sliderData[_this.data('value')].from=from;
-//                       web.data.sliderData[_this.data('value')].to=to;
-//                        web.items.formData();
-//                }
-//                console.log(web.data.sliderData);
-//            }
-//        });
-//            $('._slider').on("Finish", function(){
-//                
-//                
-////                map.removeLayer(markers);
-//            });
-
 
 }
 
@@ -432,14 +378,7 @@ web.items.redrawMap =function(){
                     marker= L.marker([value.Lat,value.Long], {icon: icon});
                     markers.addLayer(marker);
                 }
-//                map.addLayer(markers).addTo(map);
-
-
-               
-               
-
             });
-                
                 markers.addTo(map);
 }
     
