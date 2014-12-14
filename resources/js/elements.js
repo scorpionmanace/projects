@@ -8,6 +8,8 @@ web.data.superherodata;
 web.data.info;
 web.data.currentIndexes;
 web.data.popdata = [];
+web.data.currentcountindex='undefined';
+web.data.currentindex='undefined';
 
 $("document").ready(function(){
     web.handlers();
@@ -56,6 +58,8 @@ web.handlers=function() {
     
     
         $('body').delegate('.point','click',web.action.showStats);
+        $('body').delegate('#navright','click',web.action.showNextCharacter);
+        $('body').delegate('#navleft','click',web.action.ShowPrevCharacter);
 
 
 }
@@ -519,7 +523,9 @@ web.action.showStats = function(){
     console.log(indexes);
     web.data.currentIndexes=indexes;
     web.items.performDataFetch(indexes);
-    web.items.createTemplate(0,0);
+    web.data.currentindex=0;
+    web.data.currentcountindex=0;
+    web.items.createTemplate(web.data.currentindex,web.data.currentcountindex);
 }
 web.items.performDataFetch = function(indexes){
     web.data.popdata.length=0;
@@ -537,6 +543,8 @@ var powers=[
     "Combat"
 ];
 var data=web.data.popdata[index];
+    template.find('#navright').removeClass('active').addClass(previouscount+1===web.data.popdata.length?'':'active');
+    template.find('#navleft').removeClass('active').addClass(previouscount+1===1?'':'active');
     template.find('._current-count').html(previouscount+1);
     template.find('._total-count').html(web.data.popdata.length);
     template.find('#charname').children('label').html(data.Name);
@@ -551,8 +559,29 @@ var data=web.data.popdata[index];
 }
 
 
+web.action.ShowPrevCharacter = function(){
+    var template=$('.info.leaflet-control');
+    template.find('#navleft').removeClass('active').addClass('active');
+    if(web.data.currentcountindex===0){
+        template.find('#navleft').removeClass('active');
+    }
+    else if(web.data.currentcountindex <web.data.popdata.length){
+        web.items.createTemplate(web.data.currentcountindex-1,web.data.currentcountindex-1);
+        web.data.currentcountindex--;
+    }
+}
+web.action.showNextCharacter = function(){
+    var template=$('.info.leaflet-control');
+    template.find('#navright').removeClass('active').addClass('active');
+    if(web.data.currentcountindex===web.data.popdata.length-1){
+        template.find('#navright').removeClass('active');
+    }
+    else if(web.data.currentcountindex <web.data.popdata.length-1){
+        web.items.createTemplate(web.data.currentcountindex+1,web.data.currentcountindex+1);
+        web.data.currentcountindex++;
+    }
 
-
+}
 
 
 
