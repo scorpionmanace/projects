@@ -2,7 +2,7 @@
 .chart-horiz .chart{width:100%;margin-left:-40px;}
 .chart-horiz
 .chart li{display:block;height:30px;margin-top:10px;position:relative;}
-.chart-horiz .chart li:before{color:ivory;content:attr(title);left:5px;position:absolute}
+.chart-horiz .chart li:before{color:ivory;content:attr(title);left:5px;position:absolute;top:5px}
 .chart-horiz .chart li.title:before{color:black;font-weight:bold;left:0}
 .chart-horiz .chart li:first-child{margin-top:0}
 .chart-horiz .chart li .bar2{background:black;height:100%}
