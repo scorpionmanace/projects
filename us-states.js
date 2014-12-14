@@ -335,7 +335,7 @@ var superheroData=[
     "id":19,  
     "Name":"Invisible Woman",
     "Alignment":"good",
-    "Location":"Glenville, Long Island, New York",
+    "Location":"Long Island, New York",
     "State":"NY",
     "Lat":42.1497,
     "Long":-74.9384,
