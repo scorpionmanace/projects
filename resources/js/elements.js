@@ -4,7 +4,10 @@ web.handlers = "" || {};
 web.action = "" || {};
 web.data = "" || {};
 web.items= "" || {};
-
+web.data.superherodata;
+web.data.info;
+web.data.currentIndexes;
+web.data.popdata = [];
 
 $("document").ready(function(){
     web.handlers();
@@ -514,10 +517,52 @@ web.action.showStats = function(){
     var indexes=_this.children('div').data("items").split(",");
     indexes.pop();
     console.log(indexes);
-    
-    var template=$('#popparent').html();
-
+    web.data.currentIndexes=indexes;
+    web.items.performDataFetch(indexes);
+    web.items.createTemplate(0,0);
 }
+web.items.performDataFetch = function(indexes){
+    web.data.popdata.length=0;
+    $.each(indexes,function(key,index){
+        web.data.popdata.push(web.data.superherodata[index-1]);
+    });
+}
+web.items.createTemplate = function(index,previouscount){
+var template=$('.info.leaflet-control');
+var powers=[ 
+    "Strength",
+    "Speed",
+    "Durability",
+    "Power",
+    "Combat"
+];
+var data=web.data.popdata[index];
+    template.find('._current-count').html(previouscount+1);
+    template.find('._total-count').html(web.data.popdata.length);
+    template.find('#charname').children('label').html(data.Name);
+    template.find('#charname').children('.icon').removeClass('villian-mm hero-mm').addClass(data.Alignment === 'good'? 'hero-mm': 'villian-mm');
+    template.find('._alias').html(data.Name);
+    template.find('._location').html(data.Location);
+    $.each(powers, function(key,power){
+        template.find('.'+power).children('.bar2').data('number',data[power]).css({"width":data[power]+"%"});
+        template.find('.'+power).children('.number').html(data[power]).css({"left":data[power]+"%"});
+        template.find('.'+power).children('.bar2').data('number',data[power]).css({"width":data[power]+"%"});
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //function css(a) {

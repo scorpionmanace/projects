@@ -173,6 +173,8 @@ footer .heading{
     font-size: 20px;
     font-weight: 200;
     letter-spacing: 1.5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 #charname{font-size:30px;}
 #charname label{font-weight: 200 !important;}
