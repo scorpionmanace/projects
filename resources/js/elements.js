@@ -45,6 +45,15 @@ web.handlers=function() {
             slider.reset();
             });
         });
+    
+        $(document).delegate('body','click',function(e){
+            e.stopPropagation();
+            e.preventDefault;
+            var template=$('.info.leaflet-control');
+            if(template.children('#popsuper').hasClass('show') && !$(e.target).parent().hasClass('point') && !$(e.target).parents('.info').hasClass('leaflet-control')){
+                template.children('#popsuper').removeClass('show hide').addClass('hide');
+            }
+        });
 
 }
 
@@ -62,6 +71,8 @@ web.items.sliders = function(){
                 grid:true,
                 
                 onChange: function(data){
+                    var template=$('.info.leaflet-control');
+                    template.children('#popsuper').removeClass('show hide').addClass('hide');
                     console.log(data);
                     var _this=$("#"+value);
                     var _check=_this.parent().find('input[type="checkbox"]');
@@ -75,6 +86,8 @@ web.items.sliders = function(){
                     }
                 },
                 onUpdate: function(data){
+                    var template=$('.info.leaflet-control');
+                    template.children('#popsuper').removeClass('show hide').addClass('hide');
                     var _this=$("#"+value);
                     var _check=_this.parent().find('input[type="checkbox"]');
                     var from =data.from;
@@ -403,6 +416,7 @@ web.items.performDataFetch = function(indexes){
 }
 web.items.createTemplate = function(index,previouscount){
 var template=$('.info.leaflet-control');
+    template.children('#popsuper').removeClass('hide').addClass('show');
 var powers=[ 
     "Strength",
     "Speed",
