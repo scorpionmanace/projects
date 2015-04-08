@@ -1,0 +1,258 @@
+{
+    "cols": [
+        {
+            "id": "",
+            "label": "Cropname",
+            "pattern": "",
+            "type": "string"
+        },
+        {
+            "id": "",
+            "label": "Value_in_millions_of_dollars",
+            "pattern": "",
+            "type": "number"
+        }
+    ],
+    "rows": [
+        {
+            "c": [
+                {
+                    "v": "ALMONDS ALL",
+                    "f": null
+                },
+                {
+                    "v": 18174.54,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "GRAPES WINE",
+                    "f": null
+                },
+                {
+                    "v": 15952.43,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "GRAPES TABLE",
+                    "f": null
+                },
+                {
+                    "v": 8403.42,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "BERRIES STRAWBERRIES FRESH MARKET",
+                    "f": null
+                },
+                {
+                    "v": 8248.96,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "HAY ALFALFA",
+                    "f": null
+                },
+                {
+                    "v": 7374.48,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "WALNUTS ENGLISH",
+                    "f": null
+                },
+                {
+                    "v": 6356.06,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "RICE MILLING",
+                    "f": null
+                },
+                {
+                    "v": 5867.57,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "TOMATOES PROCESSING",
+                    "f": null
+                },
+                {
+                    "v": 5680.82,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "PISTACHIOS",
+                    "f": null
+                },
+                {
+                    "v": 5527.78,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "LETTUCE HEAD",
+                    "f": null
+                },
+                {
+                    "v": 4855.68,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "ORANGES NAVEL",
+                    "f": null
+                },
+                {
+                    "v": 4715.2,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "LETTUCE LEAF",
+                    "f": null
+                },
+                {
+                    "v": 3208.53,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "LETTUCE ROMAINE",
+                    "f": null
+                },
+                {
+                    "v": 3062.49,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "GRAPES RAISIN",
+                    "f": null
+                },
+                {
+                    "v": 3012.55,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "CORN SILAGE",
+                    "f": null
+                },
+                {
+                    "v": 2898.99,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "LEMONS ALL",
+                    "f": null
+                },
+                {
+                    "v": 2566.53,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "COTTON LINT PIMA",
+                    "f": null
+                },
+                {
+                    "v": 2420.49,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "TOMATOES FRESH MARKET",
+                    "f": null
+                },
+                {
+                    "v": 2301.94,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "CARROTS UNSPECIFIED",
+                    "f": null
+                },
+                {
+                    "v": 2292.23,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "AVOCADOS ALL",
+                    "f": null
+                },
+                {
+                    "v": 2087.49,
+                    "f": null
+                }
+            ]
+        }
+    ]
+}
